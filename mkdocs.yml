@@ -1,0 +1,18 @@
+site_name: Nahom Quest
+site_url: https://nahomsososa.com/nahomquest
+site_author: Nahom Sososa
+site_description: Nahom's data and gaming portfolio
+
+theme:
+  name: "material"
+  palette:
+    primary: "purple"
+    accent: "white"
+  #logo:
+plugins:
+    - search
+    
+nav:
+  - Home: index.md
+
+
