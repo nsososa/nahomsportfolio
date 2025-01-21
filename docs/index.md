@@ -1,6 +1,29 @@
+# Home
 
-![](https://miro.medium.com/v2/resize:fit:630/1*5ViR1Ln_Her3m_nVXiJi0g.png)
+Skills: `python` `RStudio` `R programming`
 
-[Video Game Sales Exploratory Data Analysis in R](vgsales.md)
------------------------------------------------------
-In-depth exploration of video games from 1977 to 2016
+Welcome to my portfolio! Scroll down to view my projects.
+
+<div class="image-gallery">
+  <div class="image-item">
+    <img src="assets/vgsales.jpg" alt="Project 1">
+    <div class="image-overlay">
+      <h3>Project 1</h3>
+      <p>Description for project 1.</p>
+    </div>
+  </div>
+  <div class="image-item">
+    <img src="assets/portfoliologo_v1.png" alt="Project 2">
+    <div class="image-overlay">
+      <h3>Project 2</h3>
+      <p>Description for project 2.</p>
+    </div>
+  </div>
+  <div class="image-item">
+    <img src="assets/640px-DARPA_Big_Data.jpg" alt="Project 3">
+    <div class="image-overlay">
+      <h3>Project 3</h3>
+      <p>Description for project 3.</p>
+    </div>
+  </div>
+</div>
