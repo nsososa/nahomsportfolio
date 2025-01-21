@@ -12,6 +12,10 @@
         <meta name="author" content="Nahom Sososa">
       
       
+        <link rel="canonical" href="https://nahomsososa.com/portfolio/about/">
+      
+      
+        <link rel="prev" href="..">
       
       
       
@@ -20,7 +24,7 @@
     
     
       
-        <title>Introduction - Nahom Portfolio</title>
+        <title>About - Nahom Portfolio</title>
       
     
     
@@ -71,11 +75,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#introduction" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -108,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              About
             
           </span>
         </div>
@@ -218,10 +217,17 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -230,6 +236,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -251,34 +258,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#initial-assumptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initial Assumptions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#questions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Questions
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -293,48 +272,9 @@
                   
 
 
-<h1 id="introduction"><strong>Introduction</strong></h1>
-<p>Hey everyone and welcome to my first article on Medium! I've been learning a lot from the courses I've been taking with the main tool used being R. What better way to apply some of my learnings than a project on a game data set?</p>
-<blockquote>
-<p>Data found on: <a href="https://www.kaggle.com/datasets/gregorut/videogamesales">Kaggle</a> Original data source: <a href="https://www.vgchartz.com/">VGChartz</a></p>
-</blockquote>
-<h2 id="initial-assumptions"><strong>Initial Assumptions</strong></h2>
-<p>Based on my background and love for video games, I have a few assumptions I expect to see during and after performing this analysis:</p>
-<ul>
-<li><strong>Nintendo</strong> will be the dominant developer/publisher for <em>a lot</em> of years. It's impressive how Nintendo manages to never significantly change their business model or way of developing games but still continue to release popular games that appeal to a vast audience.</li>
-<li><strong>PlayStation 2</strong> was massive. There will be a spike in the year 2000/2001 right when it was released and it will be the top console platform.</li>
-<li><strong>Grand Theft Auto: V</strong> is a timeless game released in 2013, that's still widely popular to this day. I expect to see that reflected in the data from 2013--2016, since the data set only records data until 2016 (there are points for 2017--2020 but only 4).</li>
-<li><strong>Wii Sports</strong> will have a lot of sales, maybe even the top selling game, higher than the likes of Call of Duty, GTA V, and Super Mario. Wii Sports was innovative. It was the first of its kind and brought family gaming of all ages right there into the home.</li>
-<li><strong>World of Warcraft</strong> was a revolutionary game that changed the MMO scene. I expect it to be one of the top games across the board.</li>
-<li><strong>Atari</strong> was a big contributor to the game market crash of the 1980s. I expect to see a drastic drop in sales during this time period.</li>
-</ul>
-<h2 id="questions"><strong>Questions</strong></h2>
-<ol>
-<li>Which company had the top sales?</li>
-<li>Is there a correlation between platform and sales?</li>
-<li>Which game sold the most and why?</li>
-<li>Which platform(s) are most people using?</li>
-<li>Who is publishing the most games? Does that necessarily mean they have the most sales?</li>
-</ol>
-<p>Let's get right into it by first loading necessary libraries and the data set:</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># libraries used</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">ggrepel</span><span class="p">)</span><span class="w">  </span>
-<span class="nf">library</span><span class="p">(</span><span class="n">dlookr</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">skimr</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">plyr</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">ggpubr</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">gganimate</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">ggcorrplot</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">DataExplorer</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">lubridate</span><span class="p">)</span>
+  <h1>About</h1>
 
-<span class="c1"># load and view first 10 rows of data set</span>
-<span class="n">vgsales</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;vgsales.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
-<span class="nf">head</span><span class="p">(</span><span class="n">vgsales</span><span class="p">)</span>
-</code></pre></div>
-<em>Quick note: I reference packages throughout the code. For example, the glimpse() function will be denoted dplyr::glimpse() since it's from the dplyr package. Shoutout to </em><a href="https://www.linkedin.com/feed/update/urn:li:activity:7054072731482390529?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7054072731482390529%29"><em>Kinga on LinkedIn</em></a><em> for this tip!</em></p>
+<p>hi</p>
 
 
 
@@ -359,6 +299,28 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
