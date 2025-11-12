@@ -1,0 +1,80 @@
+site_name: Nahom Sososa | Turning Data Into Stories
+site_url: http://127.0.0.1:8000/portfolio/
+site_author: Nahom Sososa
+site_description: Nahom's data and analytics projects
+
+theme:
+  name: "material"
+  palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: custom
+    accent: custom
+    toggle:
+      icon: material/weather-night
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: light)"
+    scheme: slate
+    primary: custom
+    accent: custom
+    toggle:
+      icon: material/white-balance-sunny
+      name: Switch to light mode
+  features:
+    - navigation.footer
+    - navigation.instant          # instant page loads (no full reload)
+    - navigation.instant.progress # thin loading bar at the top
+  #font:
+    #text: Inter
+  icon:
+    logo: material/chart-scatter-plot
+  
+      
+plugins:
+  - search
+     
+nav:
+  - Home: index.md
+  - About: about.md
+  - Resume: resume.md
+  - Projects:
+      - Video Game Sales EDA: portfolio/video_game_sales_exploratory_data_analysis_in_r.md
+      - Portfolio Branding: portfolio/portfolio_branding.md
+      - Big Data Project: portfolio/big_data_project.md
+
+markdown_extensions: # for syntax highlighting in code blocks
+  - pymdownx.superfences:
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.snippets:
+      check_paths: true
+      url_download: false
+      url_max_size: 33554432
+      url_timeout: 10
+  - attr_list
+
+extra_css:
+- 'stylesheets/extra.css'
+#- 'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'
+-  https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css
+-  https://cdn.jsdelivr.net/npm/glightbox@3.0.0/dist/css/glightbox.min.css
+- 'stylesheets/lightbox.css'
+-  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js
+  - https://cdn.jsdelivr.net/npm/glightbox@3.0.0/dist/js/glightbox.min.js
+  - js/lightbox.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/nahomsososa/
+      name: Nahom on LinkedIn
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@nsososa
+      name: Nahom on Medium
+    - icon: fontawesome/brands/github
+      link: https://github.com/nsososa
+      name: Nahom on GitHub
+   # add tableau logo - icon: fontawesome/
