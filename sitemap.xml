@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>http://127.0.0.1:8000/portfolio/</loc>
+         <loc>https://nsososa.github.io/nahomsportfolio/</loc>
          <lastmod>2025-11-12</lastmod>
     </url>
     <url>
-         <loc>http://127.0.0.1:8000/portfolio/about/</loc>
+         <loc>https://nsososa.github.io/nahomsportfolio/about/</loc>
          <lastmod>2025-11-12</lastmod>
     </url>
     <url>
-         <loc>http://127.0.0.1:8000/portfolio/marketing/</loc>
+         <loc>https://nsososa.github.io/nahomsportfolio/marketing/</loc>
          <lastmod>2025-11-12</lastmod>
     </url>
     <url>
-         <loc>http://127.0.0.1:8000/portfolio/reganalysis/</loc>
+         <loc>https://nsososa.github.io/nahomsportfolio/reganalysis/</loc>
          <lastmod>2025-11-12</lastmod>
     </url>
     <url>
-         <loc>http://127.0.0.1:8000/portfolio/resume/</loc>
+         <loc>https://nsososa.github.io/nahomsportfolio/resume/</loc>
          <lastmod>2025-11-12</lastmod>
     </url>
     <url>
-         <loc>http://127.0.0.1:8000/portfolio/video_game_sales_exploratory_data_analysis_in_r/</loc>
+         <loc>https://nsososa.github.io/nahomsportfolio/video_game_sales_exploratory_data_analysis_in_r/</loc>
          <lastmod>2025-11-12</lastmod>
     </url>
 </urlset>
