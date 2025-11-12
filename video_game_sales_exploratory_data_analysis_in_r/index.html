@@ -6,27 +6,27 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Nahom's data and gaming portfolio">
+        <meta name="description" content="Nahom's data and analytics projects">
       
       
         <meta name="author" content="Nahom Sososa">
       
       
-        <link rel="canonical" href="https://nahomsososa.com/portfolio/video_game_sales_exploratory_data_analysis_in_r/">
+        <link rel="canonical" href="http://127.0.0.1:8000/portfolio/video_game_sales_exploratory_data_analysis_in_r/">
       
       
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
     
     
       
-        <title>Introduction - Nahom Portfolio</title>
+        <title>Introduction - Nahom Sososa | Turning Data Into Stories</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -50,6 +50,14 @@
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.0.0/dist/css/glightbox.min.css">
+    
+      <link rel="stylesheet" href="../stylesheets/lightbox.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -62,10 +70,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="white">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -90,10 +100,10 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Nahom Portfolio" class="md-header__button md-logo" aria-label="Nahom Portfolio" data-md-component="logo">
+    <a href=".." title="Nahom Sososa | Turning Data Into Stories" class="md-header__button md-logo" aria-label="Nahom Sososa | Turning Data Into Stories" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 2h2v18h18v2H2zm7 8a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m4-8a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m5 10a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -104,7 +114,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Nahom Portfolio
+            Nahom Sososa | Turning Data Into Stories
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -118,7 +128,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m3.55 19.09 1.41 1.41 1.8-1.79-1.42-1.42M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6c0-3.32-2.69-6-6-6m8 7h3v-2h-3m-2.76 7.71 1.8 1.79 1.41-1.41-1.79-1.8M20.45 5l-1.41-1.4-1.8 1.79 1.42 1.42M13 1h-2v3h2M6.76 5.39 4.96 3.6 3.55 5l1.79 1.81zM1 13h3v-2H1m12 9h-2v3h2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -185,13 +221,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Nahom Portfolio" class="md-nav__button md-logo" aria-label="Nahom Portfolio" data-md-component="logo">
+    <a href=".." title="Nahom Sososa | Turning Data Into Stories" class="md-nav__button md-logo" aria-label="Nahom Sososa | Turning Data Into Stories" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 2h2v18h18v2H2zm7 8a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m4-8a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m5 10a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3"/></svg>
 
     </a>
-    Nahom Portfolio
+    Nahom Sososa | Turning Data Into Stories
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -208,6 +244,7 @@
   
   <span class="md-ellipsis">
     Home
+    
   </span>
   
 
@@ -228,10 +265,141 @@
   
   <span class="md-ellipsis">
     About
+    
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resume
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../portfolio/video_game_sales_exploratory_data_analysis_in_r.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Video Game Sales EDA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../portfolio/portfolio_branding.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Portfolio Branding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../portfolio/big_data_project.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Big Data Project
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -280,6 +448,93 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#data-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Exploration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Exploration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missing Values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribution-of-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribution of Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correlation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-part-2-time-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis Part 2: Time Series
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gaming-market-crash-of-the-1980s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gaming Market Crash of the 1980s
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -295,12 +550,17 @@
                   
 
 
-<h1 id="introduction"><strong>Introduction</strong></h1>
-<p>Hey everyone and welcome to my first article on Medium! I've been learning a lot from the courses I've been taking with the main tool used being R. What better way to apply some of my learnings than a project on a game data set?</p>
+
+<h1 id="introduction">Introduction</h1>
 <blockquote>
-<p>Data found on: <a href="https://www.kaggle.com/datasets/gregorut/videogamesales">Kaggle</a> Original data source: <a href="https://www.vgchartz.com/">VGChartz</a></p>
+<p><div class="project-skills">
+        <strong>Skills:</strong>
+        <span class="skill-tag">R</span>
+        <span class="skill-tag">Excel</span>
+  </div></p>
+<p>Data found on: <a href="https://www.kaggle.com/datasets/gregorut/videogamesales">Kaggle</a> Original data source: <a href="https://www.vgchartz.com/">VGChartz</a></p>
 </blockquote>
-<h2 id="initial-assumptions"><strong>Initial Assumptions</strong></h2>
+<h3 id="initial-assumptions"><strong>Initial Assumptions</strong></h3>
 <p>Based on my background and love for video games, I have a few assumptions I expect to see during and after performing this analysis:</p>
 <ul>
 <li><strong>Nintendo</strong> will be the dominant developer/publisher for <em>a lot</em> of years. It's impressive how Nintendo manages to never significantly change their business model or way of developing games but still continue to release popular games that appeal to a vast audience.</li>
@@ -310,7 +570,7 @@
 <li><strong>World of Warcraft</strong> was a revolutionary game that changed the MMO scene. I expect it to be one of the top games across the board.</li>
 <li><strong>Atari</strong> was a big contributor to the game market crash of the 1980s. I expect to see a drastic drop in sales during this time period.</li>
 </ul>
-<h2 id="questions"><strong>Questions</strong></h2>
+<h3 id="questions"><strong>Questions</strong></h3>
 <ol>
 <li>Which company had the top sales?</li>
 <li>Is there a correlation between platform and sales?</li>
@@ -319,7 +579,7 @@
 <li>Who is publishing the most games? Does that necessarily mean they have the most sales?</li>
 </ol>
 <p>Let's get right into it by first loading necessary libraries and the data set:</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># libraries used</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># libraries used</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">ggrepel</span><span class="p">)</span><span class="w">  </span>
@@ -336,7 +596,359 @@
 <span class="n">vgsales</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;vgsales.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">vgsales</span><span class="p">)</span>
 </code></pre></div>
-<em>Quick note: I reference packages throughout the code. For example, the glimpse() function will be denoted dplyr::glimpse() since it's from the dplyr package. Shoutout to </em><a href="https://www.linkedin.com/feed/update/urn:li:activity:7054072731482390529?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7054072731482390529%29"><em>Kinga on LinkedIn</em></a><em> for this tip!</em></p>
+<p><em>Quick note: I reference packages throughout the code. For example, the glimpse() function will be denoted dplyr::glimpse() since it's from the dplyr package. Shoutout to </em><a href="https://www.linkedin.com/feed/update/urn:li:activity:7054072731482390529?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7054072731482390529%29"><em>Kinga on LinkedIn</em></a><em> for this tip!</em></p>
+<div style="text-align: center; padding: 20px 0; letter-spacing:10px;">• • •</div>
+
+<h3 id="data-exploration"><strong>Data Exploration</strong></h3>
+<p>As always, the first step should be to explore our data set and get familiar with it. One package I recently discovered and have fallen in love with for this step is the “DataExplorer” package. We’ll use this package along with a couple others to understand the data structure, find missing values, explore outliers, and visualize distributions of the data.</p>
+<h4 id="data-structure"><strong>Data Structure</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># provides a summary of each column  </span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">vgsales</span><span class="p">)</span>
+
+<span class="c1"># another way to get more information about each column</span>
+<span class="n">dplyr</span><span class="o">::</span><span class="nf">glimpse</span><span class="p">(</span><span class="n">vgsales</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="Code Output" src="../assets/summary_output.png" />
+<img alt="Code Output" src="../assets/glimpse_output.png" /></p>
+<p>Just from looking at these two summaries, there are going to be “outliers”. For example, looking at Global_Sales, the median is 0.17 while the maximum value is 82.74. This is expected since we’re talking about video game sales from notable companies like Nintendo, Sony, Electronic Arts, and Activision, where there are going to be games that blow up at certain times. We can tell that the sales data is heavily right skewed by looking at the summary statistics, as there’s a wide range between the values. We’ll decide what to do with this later on (will likely perform analysis with them included regardless), but let’s move on to tidying our data set.</p>
+<div style="text-align: center; padding: 20px 0; letter-spacing:10px;">• • •</div>
+
+<h4 id="missing-values"><strong>Missing Values</strong></h4>
+<p>When exploring the data set, I noticed 271 missing data points in “Year” and 261 in “Publisher” that had values of string “N/A” in the Year and Publisher column, as well as “Unknown” in the Publisher column. Let’s find out more using dplyr, skimr, and DataExplorer:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># replace string &quot;N/A&quot; with NA to use is.na() function</span>
+<span class="n">vgsales</span><span class="p">[</span><span class="n">vgsales</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;N/A&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NA</span>
+<span class="n">vgsales</span><span class="p">[</span><span class="n">vgsales</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Unknown&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NA</span>
+
+<span class="c1"># sum of all missing data points in each column</span>
+<span class="n">vgsales</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="nf">everything</span><span class="p">())</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">summarise_all</span><span class="p">(</span><span class="nf">funs</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">.</span><span class="p">))))</span>
+
+<span class="c1"># visualize missing points by column</span>
+<span class="n">DataExplorer</span><span class="o">::</span><span class="nf">plot_missing</span><span class="p">(</span><span class="n">vgsales</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="Code Output" src="../assets/missingrows2.png" />
+<img alt="Code Output" src="../assets/missingrows.png" /></p>
+<p>In the context of video games, this is weird since video game release dates and publishers are usually readily available. Perhaps there was an issue with the web scraping or the original source (VGChartz) had data entry errors or a malfunction in their data collection process.</p>
+<p>Since these data points are missing at random (MAR) and the percentage of missing observations is low relative to total observations, we could perform listwise deletion or imputation. However, I decide against it to keep the data as accurate as possible. If anyone has thoughts on this decision, feel free to leave a comment, as I’m still trying to deeply understand when to and not to use imputation. For this analysis, I performed data entry in Excel for the information I could find and loaded the new cleaned set. We’ll use this data set from here on out.</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># replace string &quot;N/A&quot; with NA to use is.na() function</span>
+<span class="n">vgsales</span><span class="p">[</span><span class="n">vgsales</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;N/A&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NA</span>
+<span class="n">vgsales</span><span class="p">[</span><span class="n">vgsales</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Unknown&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NA</span>
+
+<span class="c1"># sum of all missing data points in each column</span>
+<span class="n">vgsales</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="nf">everything</span><span class="p">())</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">summarise_all</span><span class="p">(</span><span class="nf">funs</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">.</span><span class="p">))))</span>
+
+<span class="c1"># visualize missing points by column</span>
+<span class="n">DataExplorer</span><span class="o">::</span><span class="nf">plot_missing</span><span class="p">(</span><span class="n">vgsales</span><span class="p">)</span>
+</code></pre></div>
+<img alt="Code Output" src="../assets/intro_output.png" />
+<img alt="Code Output" src="../assets/intro_output2.png" /></p>
+<p>Now we have much less missing observations! Let’s continue exploring the data using a few nifty R functions:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># summarize categorical variables</span>
+<span class="n">dlookr</span><span class="o">::</span><span class="nf">diagnose_category</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="Code Output" src="../assets/diagcat_output.png" /></p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># more summary statistics for each column</span>
+<span class="n">vgsales_skim</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">vgsales_clean</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="n">skimr</span><span class="o">::</span><span class="nf">skim</span><span class="p">()</span>
+<span class="nf">data.frame</span><span class="p">(</span><span class="n">vgsales_skim</span><span class="p">)</span>
+</code></pre></div>
+<img alt="Code Output" src="../assets/skimr_output2.png" />
+<img alt="Code Output" src="../assets/skimr_output.png" /></p>
+<p>I love the skim() function in skimr because it provides histogram sparklines so you can quickly see the distribution of numeric variables. That’s a good segue into our next data exploration topic.</p>
+<div style="text-align: center; padding: 20px 0; letter-spacing:10px;">• • •</div>
+
+<h4 id="distribution-of-data"><strong>Distribution of Data</strong></h4>
+<p>Firstly, let’s calculate descriptive statistics for the sales data:</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># function to calculate mode. R does not have a built-in </span>
+<span class="c1"># function for mode like median and mean!</span>
+<span class="n">Mode</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">ux</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">unique</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ux</span><span class="p">[</span><span class="nf">which.max</span><span class="p">(</span><span class="nf">tabulate</span><span class="p">(</span><span class="nf">match</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">ux</span><span class="p">)))]</span>
+<span class="p">}</span>
+
+<span class="c1"># get the standard deviation and mode for each sales column and store in a data frame</span>
+<span class="n">df_stats</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">std</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="nf">sqrt</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">NA_Sales</span><span class="p">)),</span><span class="w"> </span>
+<span class="w">                               </span><span class="nf">sqrt</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">EU_Sales</span><span class="p">)),</span><span class="w"> </span><span class="nf">sqrt</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">JP_Sales</span><span class="p">)),</span>
+<span class="w">                               </span><span class="nf">sqrt</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">Other_Sales</span><span class="p">))),</span><span class="w"> </span>
+<span class="w">                       </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="nf">Mode</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">NA_Sales</span><span class="p">),</span><span class="w"> </span>
+<span class="w">                                </span><span class="nf">Mode</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">EU_Sales</span><span class="p">),</span>
+<span class="w">                                </span><span class="nf">Mode</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">JP_Sales</span><span class="p">),</span>
+<span class="w">                                </span><span class="nf">Mode</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">Other_Sales</span><span class="p">)))</span>
+<span class="nf">row.names</span><span class="p">(</span><span class="n">df_stats</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;NA_Sales&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;EU_Sales&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;JP_Sales&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Other_Sales&quot;</span><span class="p">)</span>
+<span class="n">df_stats</span>
+</code></pre></div>
+<img alt="Code Output" src="../assets/dfstats_output.png" /></p>
+<p>Next, let’s take a look at the distribution of data by plotting histograms of each:</p>
+<div class="highlight"><pre><span></span><code><span class="n">NA_hist</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NA_Sales</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="n">ggplot2</span><span class="o">::</span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;#1ab5fb&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">bins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">geom_vline</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">NA_Sales</span><span class="p">)),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;red&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;dashed&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">geom_vline</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">NA_Sales</span><span class="p">)),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;dashed&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">geom_vline</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Mode</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">NA_Sales</span><span class="p">)),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;green&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="o">=</span><span class="s">&#39;dashed&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;Sales in North America (in millions)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;frequency&quot;</span><span class="p">)</span>
+
+<span class="n">EU_hist</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EU_Sales</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="n">ggplot2</span><span class="o">::</span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;#1ab5fb&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">bins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">geom_vline</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">EU_Sales</span><span class="p">)),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;red&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;dashed&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">geom_vline</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">EU_Sales</span><span class="p">)),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;dashed&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">geom_vline</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Mode</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">EU_Sales</span><span class="p">)),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;green&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="o">=</span><span class="s">&#39;dashed&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;Sales in Europe (in millions)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;frequency&quot;</span><span class="p">)</span>
+
+<span class="n">JP_hist</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JP_Sales</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="n">ggplot2</span><span class="o">::</span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;#1ab5fb&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">bins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">geom_vline</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">JP_Sales</span><span class="p">)),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;red&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;dashed&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">geom_vline</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">JP_Sales</span><span class="p">)),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;dashed&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">geom_vline</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Mode</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">JP_Sales</span><span class="p">)),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;green&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="o">=</span><span class="s">&#39;dashed&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;Sales in Japan (in millions)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;frequency&quot;</span><span class="p">)</span>
+
+<span class="n">Other_hist</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Other_Sales</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="n">ggplot2</span><span class="o">::</span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;#1ab5fb&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">bins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">geom_vline</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">Other_Sales</span><span class="p">)),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;red&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;dashed&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">geom_vline</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">Other_Sales</span><span class="p">)),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;dashed&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">geom_vline</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Mode</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">Other_Sales</span><span class="p">)),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;green&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="o">=</span><span class="s">&#39;dashed&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">   </span><span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;Sales in the rest of world (in millions)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;frequency&quot;</span><span class="p">)</span>
+
+<span class="c1"># arrange the graphs into a simple dashboard</span>
+<span class="n">ggpubr</span><span class="o">::</span><span class="nf">ggarrange</span><span class="p">(</span><span class="n">NA_hist</span><span class="p">,</span><span class="w"> </span><span class="n">EU_hist</span><span class="p">,</span><span class="w"> </span><span class="n">JP_hist</span><span class="p">,</span><span class="w"> </span><span class="n">Other_hist</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="Code Output" src="../assets/saleshist.png" /></p>
+<p>Although this may look abnormal, it makes sense as this data represents video game sales. The gaming market is heavily saturated and most games are released into the abyss, receiving little to no traction. The sales distribution reflects that as the most frequent sales are between 0 and 2 million, with a few widely popular games creating a positive (right) skew.</p>
+<div style="text-align: center; padding: 20px 0; letter-spacing:10px;">• • •</div>
+
+<h4 id="correlation"><strong>Correlation</strong></h4>
+<p>First, I’ll create a correlation matrix using the ggcorrplot() function in the ggcorrplot library:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># create rounded matrix of sales data</span>
+<span class="n">correlation</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">stats</span><span class="o">::</span><span class="nf">cor</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="p">[</span><span class="m">6</span><span class="o">:</span><span class="m">9</span><span class="p">]),</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
+<span class="c1"># plot correlation matrix</span>
+<span class="n">ggcorrplot</span><span class="o">::</span><span class="nf">ggcorrplot</span><span class="p">(</span><span class="n">correlation</span><span class="p">,</span><span class="w"> </span><span class="n">outline.col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;lower&quot;</span><span class="p">,</span>
+<span class="w">           </span><span class="n">ggtheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ggplot2</span><span class="o">::</span><span class="n">theme_gray</span><span class="p">,</span>
+<span class="w">           </span><span class="n">colors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;#800020&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#008000&quot;</span><span class="p">),</span>
+<span class="w">           </span><span class="n">lab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">lab_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2.5</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="Code Output" src="../assets/corrmat.png" /></p>
+<p>Let’s also visualize this using scatter plots. Note that all units for sales are in millions.</p>
+<div class="highlight"><pre><span></span><code><span class="n">NA_EU</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">NA_Sales</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EU_Sales</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#1ab5fb&quot;</span><span class="p">)</span>
+<span class="n">NA_JP</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">NA_Sales</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JP_Sales</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#5d93fd&quot;</span><span class="p">)</span>
+<span class="n">NA_Other</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">NA_Sales</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Other_Sales</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#7473fb&quot;</span><span class="p">)</span>
+<span class="n">EU_JP</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">EU_Sales</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JP_Sales</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#7ed957&quot;</span><span class="p">)</span>
+<span class="n">EU_Other</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">EU_Sales</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Other_Sales</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#ff66c4&quot;</span><span class="p">)</span>
+<span class="n">JP_Other</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">JP_Sales</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Other_Sales</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#ff914d&quot;</span><span class="p">)</span>
+
+<span class="n">ggpubr</span><span class="o">::</span><span class="nf">ggarrange</span><span class="p">(</span><span class="n">NA_EU</span><span class="p">,</span><span class="w"> </span><span class="n">NA_JP</span><span class="p">,</span><span class="w"> </span><span class="n">NA_Other</span><span class="p">,</span><span class="w"> </span><span class="n">EU_JP</span><span class="p">,</span><span class="w"> </span><span class="n">EU_Other</span><span class="p">,</span><span class="w"> </span><span class="n">JP_Other</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="Code Output" src="../assets/salesscatter.png" /></p>
+<p>By looking at the correlation matrix and scatter plots, we can see that NA_Sales + EU_Sales and EU_Sales + Other_Sales have the strongest positive correlation, while others like NA_Sales + JP_Sales are lower. This could be due to a multitude of reasons including, but not limited to:</p>
+<ul>
+<li>North America and Europe are big markets with similar audiences for gaming, maybe companies market towards these two regions in similar fashions.</li>
+<li>A lot of NA and EU are in the western world, which could explain similar purchasing trends.</li>
+<li>Western gaming preferences are completely different from the eastern world, which can explain why NA and EU have lower correlation with Japan sales.</li>
+</ul>
+<p>After all, correlation does not imply causation! Therefore, we can’t be certain by just looking at the sales data.</p>
+<div style="margin-left: 20px;">
+<span style="font-size: 1.5em; font-weight: 200;">Correlation does not imply causation.</span>
+</div>
+
+<div style="text-align: center; padding: 20px 0; letter-spacing:10px;">• • •</div>
+
+<h3 id="analysis"><strong>Analysis</strong></h3>
+<p>Now that we’ve explored the dataset and its structure, let’s get into some analysis and answer some questions! Let’s first take a look at the top 10 games at a global level:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># get top 10 games by global sales and plot them</span>
+<span class="n">dplyr</span><span class="o">::</span><span class="nf">slice_max</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">order_by</span><span class="o">=</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">Global_Sales</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">          </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="nf">reorder</span><span class="p">(</span><span class="n">Name</span><span class="p">,</span><span class="w"> </span><span class="n">Global_Sales</span><span class="p">),</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">Global_Sales</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="n">ggplot2</span><span class="o">::</span><span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="o">=</span><span class="nf">alpha</span><span class="p">(</span><span class="s">&quot;#1ab5fb&quot;</span><span class="p">,</span><span class="m">0.8</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="n">ggplot2</span><span class="o">::</span><span class="nf">geom_text</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">Publisher</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="n">ggplot2</span><span class="o">::</span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;Game&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Global_Sales (in millions)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="n">ggplot2</span><span class="o">::</span><span class="nf">coord_flip</span><span class="p">()</span>
+
+<span class="c1"># data frame of more detailed info for the top 10 games</span>
+<span class="n">dplyr</span><span class="o">::</span><span class="nf">slice_max</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">order_by</span><span class="o">=</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">Global_Sales</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="Code Output" src="../assets/top10nint.png" /></p>
+<p>As expected, Nintendo is dominant in this dataset which contains records from 1977 to 2016. They took every spot for the top 10 games! And Wii Sports tops the chart without competition. That really puts in to perspective how revolutionary the concept of Wii Sports was.</p>
+<p>Another way to put Nintendo's fame into perspective is by comparing to World of Warcraft (WoW) by Activision Blizzard. In my initial assumptions, I thought WoW would be a top selling game (probably a bit of personal bias there), which it is, but Nintendo blows it out of the water. There are a few factors that may have caused this:</p>
+<ul>
+<li>Nintendo sells on multiple different platforms while WoW is PC exclusive.</li>
+<li>Nintendo has been around longer and have a bigger global reach with classic games like Super Mario Bros, Pokemon, and Tetris.</li>
+<li>Personal computers (PC) had a higher barrier to entry. It was much easier and cheaper to purchase consoles, especially convenient handheld devices that Nintendo produced.</li>
+<li>Let’s take a look at the top 10 when excluding Nintendo:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># filter out all rows containing Nintendo as Publisher</span>
+<span class="n">nint_excluded</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">filter</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="p">,</span><span class="w"> </span><span class="o">!</span><span class="n">Publisher</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Nintendo&quot;</span><span class="p">))</span>
+
+<span class="c1"># get top 10 and visualize it</span>
+<span class="n">dplyr</span><span class="o">::</span><span class="nf">slice_max</span><span class="p">(</span><span class="n">nint_excluded</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">order_by</span><span class="o">=</span><span class="n">nint_excluded</span><span class="o">$</span><span class="n">Global_Sales</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">          </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="n">Platform</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">=</span><span class="nf">reorder</span><span class="p">(</span><span class="n">Name</span><span class="p">,</span><span class="w"> </span><span class="n">Global_Sales</span><span class="p">),</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">Global_Sales</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="nf">geom_text</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">Publisher</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;Game&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Global_Sales (in millions)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="nf">scale_fill_manual</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;#1ab5fb&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#c1ff72&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#7473fb&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#5d93fd&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="nf">coord_flip</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="Code Output" src="../assets/top10exclnint.png" /></p>
+<p>Grand Theft Auto and Call of Duty (Modern Warfare 3 and Black Ops 2 being my personal favorites) across the board! It is crazy to think GTA V has been out for ten years and is still massively popular. Although it does seem like GTA 6 is on the horizon, where <a href="https://x.com/RockstarGames/status/1489617718009606150" target="_blank" rel="noopener noreferrer"><ins><strong>Rockstar Games tweeted in early 2022</strong></ins></a> detailing that “active development for the next entry in the series is underway”.</p>
+<p>Also, in late 2022 a bunch of leaks came out and <a href="https://x.com/RockstarGames/status/1571849091860029455" target="_blank" rel="noopener noreferrer"><ins><strong>Rockstar tweeted</strong></ins></a> to acknowledge the network intrusion which reached over 1 million likes, which really puts into perspective how massive these GTA 6 leaks were.</p>
+<p>Back on topic, still no WoW in the top 10! This likely goes back to the point I made above about consoles being cheaper and easier to purchase. PlayStation 2 and Xbox 360 were massive and changed the game for consoles. The technical, graphical, and quality of life (QOL) jump from PlayStation 1 and Xbox was drastic and PC gaming was still a bit niche at this point since PCs were just starting to rise in the market, although growing rapidly.</p>
+<div style="margin-left: 20px;">
+<span style="font-size: 1.5em; font-weight: 200;">PlayStation 2 and Xbox 360 were massive and changed the game for consoles.</span>
+</div>
+
+<p>Let’s take a look at PC games only:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># select rows containing PC in Platform column</span>
+<span class="n">PC_only</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">vgsales_clean</span><span class="p">[</span><span class="nf">is.element</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">Platform</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;PC&#39;</span><span class="p">)),]</span>
+
+<span class="c1"># get top 10 games by global sales and plot them</span>
+<span class="n">dplyr</span><span class="o">::</span><span class="nf">slice_max</span><span class="p">(</span><span class="n">PC_only</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">order_by</span><span class="o">=</span><span class="n">PC_only</span><span class="o">$</span><span class="n">Global_Sales</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">          </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="nf">reorder</span><span class="p">(</span><span class="n">Name</span><span class="p">,</span><span class="w"> </span><span class="n">Global_Sales</span><span class="p">),</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">Global_Sales</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="n">ggplot2</span><span class="o">::</span><span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="o">=</span><span class="nf">alpha</span><span class="p">(</span><span class="s">&quot;#7473fb&quot;</span><span class="p">,</span><span class="m">0.8</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="n">ggplot2</span><span class="o">::</span><span class="nf">geom_text</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">Publisher</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="n">ggplot2</span><span class="o">::</span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;Game&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Global_Sales (in millions)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="n">ggplot2</span><span class="o">::</span><span class="nf">coord_flip</span><span class="p">()</span>
+
+<span class="c1"># data frame of the top 10 for more detailed info</span>
+<span class="n">dplyr</span><span class="o">::</span><span class="nf">slice_max</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">order_by</span><span class="o">=</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">Global_Sales</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="Code Output" src="../assets/top10games.png" /></p>
+<p><strong><em>Wow!</em></strong> I knew The Sims 3 was big but did not know it sold more than WoW (no pun intended). In retrospect, it does make sense because The Sims 3 introduced a new, open world and interconnected community experience that imitated real life, which is essentially a Metaverse before the term became mainstream.</p>
+<p>World of Warcraft: Wrath of the Lich King was my first WoW, so I’m a bit shocked that it’s not in the top 10. The story of the Lich King/Arthas was a huge attraction in the gaming world because of the character’s development from hero to anti-hero to villain. I mean who hasn’t seen that <a href="https://www.youtube.com/watch?v=BCr7y4SLhck" target="_blank" rel="noopener noreferrer"><ins><strong><em>chilling, epic, unnerving cinematic trailer?</em></strong></ins></a></p>
+<p>Now, let’s take a deeper look at the different platforms:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># get frequency of each platform and aggregate into a data frame</span>
+<span class="n">platform_freq</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">plyr</span><span class="o">::</span><span class="nf">count</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Platform&#39;</span><span class="p">)</span>
+<span class="n">platform_sales</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">aggregate</span><span class="p">(</span><span class="nf">list</span><span class="p">(</span><span class="n">Global_Sales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">Global_Sales</span><span class="p">),</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">Platform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">Platform</span><span class="p">),</span><span class="w"> </span><span class="n">sum</span><span class="p">)</span>
+
+<span class="c1"># top 10 platforms by frequency</span>
+<span class="n">dplyr</span><span class="o">::</span><span class="nf">slice_max</span><span class="p">(</span><span class="n">platform_freq</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">order_by</span><span class="o">=</span><span class="n">freq</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">          </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="nf">reorder</span><span class="p">(</span><span class="n">Platform</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">freq</span><span class="p">),</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">freq</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="n">ggplot2</span><span class="o">::</span><span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="o">=</span><span class="nf">alpha</span><span class="p">(</span><span class="s">&quot;#5d93fd&quot;</span><span class="p">,</span><span class="m">0.8</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="n">ggplot2</span><span class="o">::</span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;Platform&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Frequency&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Top 10 Platforms by Frequency&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="nf">theme</span><span class="p">(</span><span class="n">plot.title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="m">5</span><span class="p">))</span>
+</code></pre></div>
+<p><img alt="code output" src="../assets/top10freq.png" /></p>
+<p>Interesting. Nintendo DS and PS2 are closely battling for the top but how come Wii and Xbox 360 are further down? Some of the biggest games are on those platforms. It’s because we’re looking at frequency. In this case, frequency simply means the amount of games published on these platforms. Let’s look at the top 10 sales by platform:</p>
+<div class="highlight"><pre><span></span><code><span class="n">dplyr</span><span class="o">::</span><span class="nf">slice_max</span><span class="p">(</span><span class="n">platform_sales</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">order_by</span><span class="o">=</span><span class="n">platform_sales</span><span class="o">$</span><span class="n">Global_Sales</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">          </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="nf">reorder</span><span class="p">(</span><span class="n">Platform</span><span class="p">,</span><span class="w"> </span><span class="n">Global_Sales</span><span class="p">),</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">Global_Sales</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="n">ggplot2</span><span class="o">::</span><span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="o">=</span><span class="nf">alpha</span><span class="p">(</span><span class="s">&quot;#7473fb&quot;</span><span class="p">,</span><span class="m">0.8</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="n">ggplot2</span><span class="o">::</span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;Platform&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Global Sales (in millions)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="nf">coord_flip</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Top 10 Platforms by Global Sales (in millions)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="nf">theme</span><span class="p">(</span><span class="n">plot.title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="m">5</span><span class="p">))</span>
+</code></pre></div>
+<p><img alt="Code Output" src="../assets/top10platform.png" /></p>
+<p>PS2 is still at the top, but now Nintendo DS has dropped and Xbox 360 has risen. While Nintendo DS had more games published on its platform, Xbox 360 had more hits that boosted sales. Now this begs the question of if there is a correlation between global sales and frequency of games published?</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># merge the two previous data frames</span>
+<span class="n">df_platform</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">merge</span><span class="p">(</span><span class="n">platform_freq</span><span class="p">,</span><span class="w"> </span><span class="n">platform_sales</span><span class="p">)</span>
+
+<span class="c1"># perform a simple linear model</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">df_platform</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Global_Sales</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">freq</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#1ab5fb&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">&#39;lm&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="Code Output" src="../assets/Globalsalesregression.png" /></p>
+<p>While there does appear to be some positive correlation according to the line of best fit, there's a lot of spread and distance from the line. This makes sense because publishing a lot of games on a platform does not necessarily mean the games will succeed. Although, publishing more frequently can increase the chances of releasing a popular game.</p>
+<div style="text-align: center; padding: 20px 0; letter-spacing:10px;">• • •</div>
+
+<h3 id="analysis-part-2-time-series">Analysis Part 2: Time Series</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># aggregate the sum of global_sales for each year</span>
+<span class="n">vgsales_global</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">aggregate</span><span class="p">(</span><span class="nf">list</span><span class="p">(</span><span class="n">Global_Sales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">Global_Sales</span><span class="p">),</span><span class="w"> </span>
+<span class="w">                            </span><span class="nf">list</span><span class="p">(</span><span class="n">Year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">Year</span><span class="p">),</span><span class="w"> </span><span class="n">sum</span><span class="p">)</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">vgsales_global</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Year</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">Global_Sales</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="o">=</span><span class="m">1</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_line</span><span class="p">(</span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;darkblue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#1ab5fb&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Number of Global Sales by Year (in millions)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">plot.title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="m">5</span><span class="p">),</span>
+<span class="w">        </span><span class="n">axis.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">))</span>
+</code></pre></div>
+<p><img alt="Code Output" src="../assets/Globalsalestotal.png" /></p>
+<p>As we can see, at the beginning of the games industry, it took some time for it to grow. Companies were still figuring out this new industry and gaming was heavily stigmatized at this point, so “normal” people were less inclined to become involved with games. Then, in the 90s hit games like DOOM, Half-Life, Pokemon Red/Blue, Crash Bandicoot, and many more came out and paved the way for gaming. In the early 2000s, we have the PlayStation 2 boom, which was a vital step in making gaming accessible and normalized in society. Consoles brought gaming to the home and became a family activity. Then in the mid 2000s-2010s, there was a major shift that made gaming a global phenomenon with the releases of Wii, Call of Duty, Grand Theft Auto, Sims, Halo, and more.</p>
+<p>The data starts to drop off after 2014 simply due to a lack of data. However, I would expect the data to stabilize in future years. While popular titles still release today, the huge increase in technological, graphical, and quality of life from the PS1 to PS2 does not occur at that level anymore simply because today’s technology has somewhat reached a peak. Games already look realistic. Performance is top-notch. Equipment and accessories are readily available. Almost every game idea has been done already.</p>
+<p>However, we are humans and we naturally innovate towards progress. I’m sure you’ve heard it everywhere by now, but artificial intelligence (AI) has had major advancements and implementations in the real world recently. I believe AI will play a prominent role in gaming, which will create the next boost in game performance and ideas that many gamers are yearning for. </p>
+<div style="margin-left: 20px;">
+<span style="font-size: 1.5em; font-weight: 200;">We are humans and we naturally innovate. Companies like <a href="https://www.axios.com/2023/01/06/ea-cto-marija-radulovic-nastic-interview" target="_blank" rel="noopener noreferrer"><ins>Electronic Arts</ins></a> and <a href="https://corp.roblox.com/newsroom/2023/02/generative-ai-roblox-vision-future-creation" target="_blank" rel="noopener noreferrer"><ins>Roblox</ins></a> already have been discussing the potential and plans for AI in games.</span>
+</div>
+
+<div style="text-align: center; padding: 20px 0; letter-spacing:10px;">• • •</div>
+
+<p>Let’s have some fun with animation in gganimate by looking at some of the most well known names in the industry.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># store some of the most known publishers in a vector</span>
+<span class="n">top_companies</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">vgsales_clean</span><span class="p">[</span><span class="nf">is.element</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">Publisher</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;Activision&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                                                                     </span><span class="s">&#39;Electronic Arts&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Nintendo&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                                                                     </span><span class="s">&#39;Ubisoft&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Take Two Interactive&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                                                                     </span><span class="s">&#39;Sony Computer Entertainment&#39;</span><span class="p">)),]</span>
+
+<span class="n">top_companies_sales</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">aggregate</span><span class="p">(</span><span class="n">top_companies</span><span class="o">$</span><span class="n">Global_Sales</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">top_companies</span><span class="o">$</span><span class="n">Year</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                                                                       </span><span class="n">top_companies</span><span class="o">$</span><span class="n">Publisher</span><span class="p">),</span><span class="w"> </span><span class="n">FUN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="p">)</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">top_companies_sales</span><span class="p">)[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;Year&quot;</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">top_companies_sales</span><span class="p">)[</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;Publisher&quot;</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">top_companies_sales</span><span class="p">)[</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;Global_Sales&quot;</span>
+
+<span class="n">top_companies_sales</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="nf">mutate</span><span class="p">(</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">if_else</span><span class="p">(</span><span class="n">Year</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">Year</span><span class="p">),</span><span class="w"> </span><span class="n">Publisher</span><span class="p">,</span><span class="w"> </span><span class="kc">NA_character_</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Year</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">Global_Sales</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="o">=</span><span class="n">Publisher</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="n">Publisher</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_line</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="w"> </span><span class="n">Publisher</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Number of Global Sales by Year (in millions)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">plot.title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="m">5</span><span class="p">),</span>
+<span class="w">        </span><span class="n">axis.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">),</span>
+<span class="w">        </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_label_repel</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">label</span><span class="p">),</span><span class="w"> </span><span class="n">nudge_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="n">gganimate</span><span class="o">::</span><span class="nf">transition_reveal</span><span class="p">(</span><span class="nf">as.integer</span><span class="p">(</span><span class="n">Year</span><span class="p">))</span>
+</code></pre></div>
+<p><a href="../assets/Globalsalesgif.gif" class="glightbox">
+  <img src="../assets/Globalsalesgif.gif" alt="Description" width="600px">
+</a></p>
+<p>Cool stuff, right? ggplot2 is probably my favorite library in any language that I’ve used.</p>
+<p>We can see that some of the biggest names in the industry follow a similar trend, with EA having a big jump in 2001–2003 with successful titles like Need for Speed Underground, Madden, FIFA, Medal of Honor, and more. Sony didn’t have as high sales as the rest but nevertheless still published historic franchises like Gran Turismo, Crash Bandicoot, God of War, Uncharted, LittleBigPlanet (a personal favorite), and others.</p>
+<div style="text-align: center; padding: 20px 0; letter-spacing:10px;">• • •</div>
+
+<h3 id="gaming-market-crash-of-the-1980s"><strong>Gaming Market Crash of the 1980s</strong></h3>
+<p>One last thing I wanted to explore is the market crash of the 1980s. In the early 80s, the market was worth around $3 billion and dropped to ~$100 million by the mid-80s. It was a drastic crash that was caused by a number of factors:</p>
+<ul>
+<li>The market was flooded with poor quality games and consoles.</li>
+<li>Personal computers were starting to rise in the market.</li>
+<li>Atari was the biggest at this time. Their release of E.T. was considered to be the killer of Atari and worst video game of all time, although it wasn’t the primary factor for the market crash.</li>
+<li>The poor quality games made consumers lack confidence in the future of the industry.</li>
+</ul>
+<p>This crash should be reflected in the data, let’s check it out.</p>
+<div class="highlight"><pre><span></span><code><span class="n">atari_crash</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">vgsales_clean</span><span class="p">[</span><span class="nf">is.element</span><span class="p">(</span><span class="n">vgsales_clean</span><span class="o">$</span><span class="n">Year</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;1980&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;1981&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;1982&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;1983&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;1984&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;1985&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;1986&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;1987&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;1988&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;1989&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;1990&#39;</span><span class="p">)),]</span>
+<span class="n">atari_crash_sales</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">aggregate</span><span class="p">(</span><span class="n">atari_crash</span><span class="o">$</span><span class="n">Global_Sales</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">atari_crash</span><span class="o">$</span><span class="n">Year</span><span class="p">,</span><span class="w"> </span><span class="n">atari_crash</span><span class="o">$</span><span class="n">Publisher</span><span class="p">),</span><span class="w"> </span><span class="n">FUN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="p">)</span>
+
+<span class="nf">colnames</span><span class="p">(</span><span class="n">atari_crash_sales</span><span class="p">)[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;Year&quot;</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">atari_crash_sales</span><span class="p">)[</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;Publisher&quot;</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">atari_crash_sales</span><span class="p">)[</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;Global_Sales&quot;</span>
+
+<span class="n">atari_crash_sales</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">if_else</span><span class="p">(</span><span class="n">Publisher</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Nintendo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Atari&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Activision&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">Publisher</span><span class="p">,</span><span class="w"> </span><span class="kc">NA_character_</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Year</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">Global_Sales</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="o">=</span><span class="n">Publisher</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Publisher</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_line</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="w"> </span><span class="n">Publisher</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Number of Global Sales by Year (in millions)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">plot.title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="m">5</span><span class="p">),</span>
+<span class="w">        </span><span class="n">axis.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7</span><span class="p">),</span>
+<span class="w">        </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">scale_color_manual</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;green&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#ff66c4&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#a6a6a6&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_label_repel</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">label</span><span class="p">),</span><span class="w"> </span><span class="n">nudge_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3.5</span><span class="p">)</span>
+</code></pre></div>
+<p><a href="../assets/GlobalSales2.png" class="glightbox">
+  <img src="../assets/GlobalSales2.png" alt="Description" width="690px">
+</a></p>
+<p>As expected, we see a major crash in 1983 for Atari and an overall low point for all other publishers during the 1980s. When Nintendo shifted focus to the western world with the re2lease of the Nintendo Entertainment System in 1985, we see the sales of video games begin to revitalize. The NES had stricter quality standards for third-party developers, so the same crash that Atari saw does not happen again. Nintendo did see a dip in 1986 but bounced back with the widely successful releases of Super Mario Bros. 2 &amp; 3, and Tetris.</p>
+<div style="margin-left: 20px;">
+<span style="font-size: 1.5em; font-weight: 200;"><a href="https://en.wikipedia.org/wiki/Video_game_crash_of_1983" target="_blank" rel="noopener noreferrer"><ins>Read more about the video game market crash</ins></a> </span>
+</div>
+
+<div style="text-align: center; padding: 20px 0; letter-spacing:10px;">• • •</div>
+
+<h3 id="conclusion"><strong>Conclusion</strong></h3>
+<p>Phew! We’ve made it to the end. That was fun though. I hope you had as much fun as I did doing this analysis. We found out a lot of meaningful insights about video games and even learned a bit of history. If you have any questions or feedback please feel free to connect with me on <a href="https://www.linkedin.com/in/nahomsososa/">LinkedIn</a>.</p>
+<blockquote>
+<p>Data found on: <a href="https://www.kaggle.com/datasets/gregorut/videogamesales">Kaggle</a> Original data source: <a href="https://www.vgchartz.com/">VGChartz</a></p>
+</blockquote>
 
 
 
@@ -382,7 +994,23 @@
     
     
     <a href="https://www.linkedin.com/in/nahomsososa/" target="_blank" rel="noopener" title="Nahom on LinkedIn" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://medium.com/@nsososa" target="_blank" rel="noopener" title="Nahom on Medium" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262m288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/nsososa" target="_blank" rel="noopener" title="Nahom on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
     </a>
   
 </div>
@@ -396,11 +1024,19 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "navigation.instant", "navigation.instant.progress"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/glightbox@3.0.0/dist/js/glightbox.min.js"></script>
+      
+        <script src="../js/lightbox.js"></script>
       
     
   </body>
