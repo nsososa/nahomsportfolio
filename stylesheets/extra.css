@@ -10,6 +10,11 @@
   --md-code-font-family: "Roboto Mono", monospace; /* optional if you use code blocks */
 }
 
+.tableauPlaceholder {
+  margin: 1.5rem auto;
+  max-width: 1200px;
+}
+
 .about-photo {
   width: 200px;  /* smaller, more balanced size */
   height: 200px;
