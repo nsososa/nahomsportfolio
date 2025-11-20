@@ -375,6 +375,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Simulated Supplier Insights Dashboard
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -385,6 +397,226 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guiding-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guiding Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-generation-simulation-design-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Generation, Simulation Design, &amp; Preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Generation, Simulation Design, & Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-imports-random-seed-and-core-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Imports, Random Seed, and Core Dimensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-seasonality-supplier-strength-and-covid-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Seasonality, Supplier Strength, and COVID Effects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sampling-base-fields-and-computing-seasonality-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Sampling Base Fields and Computing Seasonality Factors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-content-quality-segmentation-and-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Content Quality Segmentation and Scores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-base-traffic-and-conversion-rates-by-category-supplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Base Traffic and Conversion Rates by Category &amp; Supplier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-simulating-page-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Simulating Page Views
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-simulating-conversion-orders-and-add-to-cart-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Simulating Conversion, Orders, and Add-to-Cart Events
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-revenue-simulation-using-category-specific-aov-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Revenue Simulation Using Category-Specific AOV Ranges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-assembling-the-final-dataframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Assembling the Final DataFrame
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploratory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploratory &amp; Comparative Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploratory & Comparative Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-executive-summary-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Executive Summary View
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-supplier-deep-dive-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Supplier Deep Dive View
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-sku-level-detail-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. SKU-Level Detail View
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-impact-simulated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Impact (Simulated)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#follow-up-questions-opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Follow-Up Questions &amp; Opportunities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -440,6 +672,215 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guiding-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guiding Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-generation-simulation-design-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Generation, Simulation Design, &amp; Preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Generation, Simulation Design, & Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-imports-random-seed-and-core-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Imports, Random Seed, and Core Dimensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-seasonality-supplier-strength-and-covid-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Seasonality, Supplier Strength, and COVID Effects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sampling-base-fields-and-computing-seasonality-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Sampling Base Fields and Computing Seasonality Factors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-content-quality-segmentation-and-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Content Quality Segmentation and Scores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-base-traffic-and-conversion-rates-by-category-supplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Base Traffic and Conversion Rates by Category &amp; Supplier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-simulating-page-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Simulating Page Views
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-simulating-conversion-orders-and-add-to-cart-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Simulating Conversion, Orders, and Add-to-Cart Events
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-revenue-simulation-using-category-specific-aov-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Revenue Simulation Using Category-Specific AOV Ranges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-assembling-the-final-dataframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Assembling the Final DataFrame
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploratory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploratory &amp; Comparative Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploratory & Comparative Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-executive-summary-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Executive Summary View
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-supplier-deep-dive-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Supplier Deep Dive View
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-sku-level-detail-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. SKU-Level Detail View
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-impact-simulated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Impact (Simulated)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#follow-up-questions-opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Follow-Up Questions &amp; Opportunities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -456,14 +897,363 @@
 
 <h1 id="home-depot-simulated-supplier-insights-dashboard">Home Depot Simulated Supplier Insights Dashboard</h1>
 <blockquote>
-<p><div class="project-skills"> <strong>Skills:</strong><span class="skill-tag"><img src="/assets/logos/tableaulogo.png" alt="Tableau logo"> Tableau</span> <span class="skill-tag"><img src="/assets/logos/pythonlogo.png" alt="Python logo"> Python</span>  <span class="skill-tag"><img src="/assets/logos/excellogo.png" alt="Excel logo"> Excel</span></p>
+<p><div class="project-skills"> <strong>Skills:</strong><span class="skill-tag"><img src="/assets/logos/tableaulogo.png" alt="Tableau logo"> Tableau</span> <span class="skill-tag"><img src="/assets/logos/pythonlogo.png" alt="Python logo"> Python</span>  <span class="skill-tag"><img src="/assets/logos/excellogo.png" alt="Excel logo"> Excel</span> <span class="skill-tag"><img src="/assets/logos/github-mark.png" alt="GitHub logo"> GitHub</span></p>
 </blockquote>
-<p><strong><em>All data displayed is simulated for demonstration purposes only.</em></strong>
-https://github.com/nsososa/supplier-insights-dashboard/blob/main/datasetgenerator.ipynb</p>
 <div class='tableauPlaceholder' id='viz1763507634373' style='position: relative'><noscript><a href='#'><img alt='EXECUTIVE SUMMARYThis dashboard was built using a simulated dataset generated in Python. The dataset is designed to reflect realistic COVID impacts, supplier behavior, and conversion patterns. ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Si&#47;SimulatedSupplierInsightsDashboard&#47;EXECUTIVESUMMARY&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SimulatedSupplierInsightsDashboard&#47;EXECUTIVESUMMARY' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Si&#47;SimulatedSupplierInsightsDashboard&#47;EXECUTIVESUMMARY&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 <script type='text/javascript'>                    var divElement = document.getElementById('viz1763507634373');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1527px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+<h3 id="description"><strong>Description</strong></h3>
+<p>This project explores supplier performance using a simulated multi-year dataset built in Python. The analysis evaluates revenue, conversion rates, content quality, and product-level behavior, surfacing insights to guide merchandising strategy, supplier management, and digital content optimization.</p>
+<p><strong>Goal:</strong> Identify performance drivers across suppliers and SKUs while quantifying opportunities for improved conversion, content quality, and customer engagement.</p>
+<p><strong><em>This dashboard was built using a simulated dataset generated in Python. The dataset is designed to reflect realistic COVID impacts, supplier behavior, and conversion patterns. The code used to generate the dataset can be found below.</em></strong></p>
+<p><a href="https://github.com/nsososa/supplier-insights-dashboard/blob/main/datasetgenerator.ipynb" class="md-button">View Python Code</a></p>
+<hr />
+<h3 id="guiding-questions"><strong>Guiding Questions</strong></h3>
+<ul>
+<li>Which suppliers contribute the most revenue?</li>
+<li>How does content quality impact conversion?</li>
+<li>Where are the biggest risks—missing images, low conversion, asset quality issues?</li>
+<li>What actions can merchandising teams take to improve performance?</li>
+</ul>
+<h3 id="business-questions"><strong>Business Questions</strong></h3>
+<ul>
+<li>Which suppliers deliver the highest revenue, and how efficient are they (revenue per view)?</li>
+<li>How do product page views translate through the funnel into orders?</li>
+<li>How large is the missing-image problem, and which brands are most affected?</li>
+<li>How does content score correlate to conversion?</li>
+<li>At the SKU level, which items carry the highest risk or greatest opportunity?</li>
+</ul>
+<hr />
+<h3 id="data-generation-simulation-design-preparation"><strong>Data Generation, Simulation Design, &amp; Preparation</strong></h3>
+<p>The dataset was designed to mimic:</p>
+<ul>
+<li>COVID-era demand swings</li>
+<li>Supplier-level behavior differences</li>
+<li>Category-level seasonality</li>
+<li>Conversion patterns across millions of views</li>
+<li>Content quality variance (image completeness, asset quality, bullet quality)</li>
+</ul>
+<p>Metrics collected include:</p>
+<ul>
+<li>Revenue, orders, conversion rate</li>
+<li>Page views &amp; funnel step counts</li>
+<li>Content score &amp; asset quality score</li>
+<li>Missing image flags</li>
+<li>SKU metadata (supplier, category, product type)</li>
+</ul>
+<p><strong><em>NOTE: skip to <a href="#exploratory">Exploratory Analysis</a> if you are not interested in how the dataset was generated and designed. It's a LONG section!!</em></strong></p>
+<h4 id="1-imports-random-seed-and-core-dimensions"><strong>1. Imports, Random Seed, and Core Dimensions</strong></h4>
+<p>We start by importing libraries, fixing a random seed for reproducibility, and defining the size and core dimensions of the dataset.</p>
+<details class="tip" open="open">
+<summary>Expand/Collapse Code</summary>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">200_000</span>
+<span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">&quot;2020-01-01&quot;</span><span class="p">,</span> <span class="s2">&quot;2025-11-01&quot;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s2">&quot;D&quot;</span><span class="p">)</span>
+
+<span class="n">suppliers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;3M&quot;</span><span class="p">,</span> <span class="s2">&quot;Milwaukee&quot;</span><span class="p">,</span> <span class="s2">&quot;Ryobi&quot;</span><span class="p">,</span> <span class="s2">&quot;LG&quot;</span><span class="p">,</span> <span class="s2">&quot;Samsung&quot;</span><span class="p">,</span> <span class="s2">&quot;Behr&quot;</span><span class="p">,</span> <span class="s2">&quot;Husky&quot;</span><span class="p">,</span> <span class="s2">&quot;DeWalt&quot;</span><span class="p">,</span> <span class="s2">&quot;Delta Faucet&quot;</span><span class="p">]</span>
+<span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Power Tools&quot;</span><span class="p">,</span> <span class="s2">&quot;Appliances&quot;</span><span class="p">,</span> <span class="s2">&quot;Paint&quot;</span><span class="p">,</span> <span class="s2">&quot;Plumbing&quot;</span><span class="p">,</span> <span class="s2">&quot;Smart Home&quot;</span><span class="p">,</span> <span class="s2">&quot;Outdoor&quot;</span><span class="p">,</span> <span class="s2">&quot;Flooring&quot;</span><span class="p">]</span>
+<span class="n">merchants</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Tools Online&quot;</span><span class="p">,</span> <span class="s2">&quot;Appliances Online&quot;</span><span class="p">,</span> <span class="s2">&quot;Decor Online&quot;</span><span class="p">,</span> <span class="s2">&quot;Building Materials Online&quot;</span><span class="p">]</span>
+</code></pre></div>
+</details>
+<h4 id="2-seasonality-supplier-strength-and-covid-effects"><strong>2. Seasonality, Supplier Strength, and COVID Effects</strong></h4>
+<p>Next, we define category-level seasonality, supplier multipliers, and a COVID-era demand shock function. These pieces introduce realistic volume variation over time and across brands.</p>
+<details class="tip" open="open">
+<summary>Expand/Collapse Code</summary>
+<div class="highlight"><pre><span></span><code><span class="c1"># simulated seasonal patterns by month</span>
+<span class="c1"># Multipliers try to reflect real retail + home improvement patterns</span>
+<span class="n">category_month_seasonality</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Paint&quot;</span><span class="p">:</span>      <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mf">0.6</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mf">0.7</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="mf">0.9</span><span class="p">,</span><span class="mi">4</span><span class="p">:</span><span class="mf">1.2</span><span class="p">,</span><span class="mi">5</span><span class="p">:</span><span class="mf">1.35</span><span class="p">,</span><span class="mi">6</span><span class="p">:</span><span class="mf">1.45</span><span class="p">,</span><span class="mi">7</span><span class="p">:</span><span class="mf">1.4</span><span class="p">,</span><span class="mi">8</span><span class="p">:</span><span class="mf">1.3</span><span class="p">,</span><span class="mi">9</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">10</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">11</span><span class="p">:</span><span class="mf">0.85</span><span class="p">,</span><span class="mi">12</span><span class="p">:</span><span class="mf">0.7</span><span class="p">},</span>
+    <span class="s2">&quot;Power Tools&quot;</span><span class="p">:{</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.2</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">4</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">5</span><span class="p">:</span><span class="mf">1.2</span><span class="p">,</span><span class="mi">6</span><span class="p">:</span><span class="mf">1.3</span><span class="p">,</span><span class="mi">7</span><span class="p">:</span><span class="mf">1.3</span><span class="p">,</span><span class="mi">8</span><span class="p">:</span><span class="mf">1.2</span><span class="p">,</span><span class="mi">9</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">10</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">11</span><span class="p">:</span><span class="mf">1.4</span><span class="p">,</span><span class="mi">12</span><span class="p">:</span><span class="mf">1.6</span><span class="p">},</span>
+    <span class="s2">&quot;Appliances&quot;</span><span class="p">:</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">4</span><span class="p">:</span><span class="mf">1.2</span><span class="p">,</span><span class="mi">5</span><span class="p">:</span><span class="mf">1.25</span><span class="p">,</span><span class="mi">6</span><span class="p">:</span><span class="mf">1.3</span><span class="p">,</span><span class="mi">7</span><span class="p">:</span><span class="mf">1.2</span><span class="p">,</span><span class="mi">8</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">9</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">10</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">11</span><span class="p">:</span><span class="mf">1.3</span><span class="p">,</span><span class="mi">12</span><span class="p">:</span><span class="mf">1.5</span><span class="p">},</span>
+    <span class="s2">&quot;Plumbing&quot;</span><span class="p">:</span>   <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mf">0.9</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mf">0.9</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">4</span><span class="p">:</span><span class="mf">1.05</span><span class="p">,</span><span class="mi">5</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">6</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">7</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">8</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">9</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">10</span><span class="p">:</span><span class="mf">1.05</span><span class="p">,</span><span class="mi">11</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">12</span><span class="p">:</span><span class="mf">1.1</span><span class="p">},</span>
+    <span class="s2">&quot;Smart Home&quot;</span><span class="p">:</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">4</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">5</span><span class="p">:</span><span class="mf">1.15</span><span class="p">,</span><span class="mi">6</span><span class="p">:</span><span class="mf">1.2</span><span class="p">,</span><span class="mi">7</span><span class="p">:</span><span class="mf">1.2</span><span class="p">,</span><span class="mi">8</span><span class="p">:</span><span class="mf">1.15</span><span class="p">,</span><span class="mi">9</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">10</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">11</span><span class="p">:</span><span class="mf">1.3</span><span class="p">,</span><span class="mi">12</span><span class="p">:</span><span class="mf">1.4</span><span class="p">},</span>
+    <span class="s2">&quot;Outdoor&quot;</span><span class="p">:</span>    <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mf">0.4</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="mf">0.8</span><span class="p">,</span><span class="mi">4</span><span class="p">:</span><span class="mf">1.2</span><span class="p">,</span><span class="mi">5</span><span class="p">:</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">6</span><span class="p">:</span><span class="mf">1.7</span><span class="p">,</span><span class="mi">7</span><span class="p">:</span><span class="mf">1.6</span><span class="p">,</span><span class="mi">8</span><span class="p">:</span><span class="mf">1.3</span><span class="p">,</span><span class="mi">9</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">10</span><span class="p">:</span><span class="mf">0.9</span><span class="p">,</span><span class="mi">11</span><span class="p">:</span><span class="mf">0.6</span><span class="p">,</span><span class="mi">12</span><span class="p">:</span><span class="mf">0.4</span><span class="p">},</span>
+    <span class="s2">&quot;Flooring&quot;</span><span class="p">:</span>   <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="mf">1.05</span><span class="p">,</span><span class="mi">4</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">5</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">6</span><span class="p">:</span><span class="mf">1.15</span><span class="p">,</span><span class="mi">7</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">8</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">9</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">10</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">11</span><span class="p">:</span><span class="mf">1.15</span><span class="p">,</span><span class="mi">12</span><span class="p">:</span><span class="mf">1.2</span><span class="p">},</span>
+<span class="p">}</span>
+
+<span class="c1"># helps provide more variance in the data across suppliers</span>
+<span class="n">supplier_multiplier</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Samsung&quot;</span><span class="p">:</span> <span class="mf">3.2</span><span class="p">,</span> <span class="s2">&quot;LG&quot;</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">,</span>
+    <span class="s2">&quot;Milwaukee&quot;</span><span class="p">:</span> <span class="mf">2.8</span><span class="p">,</span> <span class="s2">&quot;DeWalt&quot;</span><span class="p">:</span> <span class="mf">2.5</span><span class="p">,</span> <span class="s2">&quot;Ryobi&quot;</span><span class="p">:</span> <span class="mf">2.3</span><span class="p">,</span>
+    <span class="s2">&quot;Behr&quot;</span><span class="p">:</span> <span class="mf">1.8</span><span class="p">,</span> <span class="s2">&quot;Husky&quot;</span><span class="p">:</span> <span class="mf">1.3</span><span class="p">,</span> <span class="s2">&quot;Delta Faucet&quot;</span><span class="p">:</span> <span class="mf">1.2</span><span class="p">,</span>
+    <span class="s2">&quot;3M&quot;</span><span class="p">:</span> <span class="mf">1.0</span>
+<span class="p">}</span>
+
+<span class="c1"># simulating COVID shock periods (Mar 2020-Dec 2021)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">covid_multiplier</span><span class="p">(</span><span class="n">date</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s2">&quot;2020-03-01&quot;</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">date</span> <span class="o">&lt;=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s2">&quot;2021-12-31&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mf">1.8</span>
+    <span class="k">return</span> <span class="mf">1.0</span>
+</code></pre></div>
+</details>
+<h4 id="3-sampling-base-fields-and-computing-seasonality-factors"><strong>3. Sampling Base Fields and Computing Seasonality Factors</strong></h4>
+<p>Here we randomly assign a date, supplier, and category to each row, then derive the corresponding seasonality and COVID multipliers.</p>
+<details class="tip" open="open">
+<summary>Expand/Collapse Code</summary>
+<div class="highlight"><pre><span></span><code><span class="n">date_col</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">dates</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">supplier_col</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">suppliers</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">category_col</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">categories</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+
+<span class="n">seasonal_mult</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="n">category_month_seasonality</span><span class="p">[</span><span class="n">c</span><span class="p">][</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">.</span><span class="n">month</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">category_col</span><span class="p">,</span> <span class="n">date_col</span><span class="p">)</span>
+<span class="p">])</span>
+
+<span class="n">covid_mult</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">covid_multiplier</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">d</span><span class="p">))</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">date_col</span><span class="p">])</span>
+</code></pre></div>
+</details>
+<h4 id="4-content-quality-segmentation-and-scores"><strong>4. Content Quality Segmentation and Scores</strong></h4>
+<p>We segment SKUs into poor, average, and great content groups. Each group gets different distributions for content score, asset quality, bullet quality, and missing images—reflecting how better content usually comes with fewer issues.</p>
+<details class="tip" open="open">
+<summary>Expand/Collapse Code</summary>
+<div class="highlight"><pre><span></span><code><span class="c1"># devising more variance in content scores depending on &quot;missing images&quot;, &quot;asset quality&quot;, and &quot;bullet quality&quot; - description quality</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">segment</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">u</span> <span class="o">&lt;</span> <span class="mf">0.25</span><span class="p">,</span> <span class="s2">&quot;poor&quot;</span><span class="p">,</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">u</span> <span class="o">&lt;</span> <span class="mf">0.75</span><span class="p">,</span> <span class="s2">&quot;avg&quot;</span><span class="p">,</span> <span class="s2">&quot;great&quot;</span><span class="p">))</span>
+
+<span class="n">content_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">asset_quality_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">bullet_quality_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">missing_images</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="c1"># poor content: lower scores, many missing images</span>
+<span class="n">mask_poor</span> <span class="o">=</span> <span class="p">(</span><span class="n">segment</span> <span class="o">==</span> <span class="s2">&quot;poor&quot;</span><span class="p">)</span>
+<span class="n">content_score</span><span class="p">[</span><span class="n">mask_poor</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">52</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">mask_poor</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">asset_quality_score</span><span class="p">[</span><span class="n">mask_poor</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="n">mask_poor</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">bullet_quality_score</span><span class="p">[</span><span class="n">mask_poor</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">55</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">mask_poor</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">missing_images</span><span class="p">[</span><span class="n">mask_poor</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">,</span> <span class="n">mask_poor</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+<span class="c1"># average content</span>
+<span class="n">mask_avg</span> <span class="o">=</span> <span class="p">(</span><span class="n">segment</span> <span class="o">==</span> <span class="s2">&quot;avg&quot;</span><span class="p">)</span>
+<span class="n">content_score</span><span class="p">[</span><span class="n">mask_avg</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">72</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">mask_avg</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">asset_quality_score</span><span class="p">[</span><span class="n">mask_avg</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">mask_avg</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">bullet_quality_score</span><span class="p">[</span><span class="n">mask_avg</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">73</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">mask_avg</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">missing_images</span><span class="p">[</span><span class="n">mask_avg</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="n">mask_avg</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+<span class="c1"># great content</span>
+<span class="n">mask_great</span> <span class="o">=</span> <span class="p">(</span><span class="n">segment</span> <span class="o">==</span> <span class="s2">&quot;great&quot;</span><span class="p">)</span>
+<span class="n">content_score</span><span class="p">[</span><span class="n">mask_great</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">mask_great</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">asset_quality_score</span><span class="p">[</span><span class="n">mask_great</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">88</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">mask_great</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">bullet_quality_score</span><span class="p">[</span><span class="n">mask_great</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">89</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">mask_great</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">missing_images</span><span class="p">[</span><span class="n">mask_great</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">mask_great</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+<span class="n">content_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">content_score</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">asset_quality_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">asset_quality_score</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">bullet_quality_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">bullet_quality_score</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<h4 id="5-base-traffic-and-conversion-rates-by-category-supplier"><strong>5. Base Traffic and Conversion Rates by Category &amp; Supplier</strong></h4>
+<p>We define base page-view intensity and base conversion rates per category, then apply supplier-level adjustments so stronger brands convert better.</p>
+<details class="tip" open="open">
+<summary>Expand/Collapse Code</summary>
+<div class="highlight"><pre><span></span><code><span class="c1"># Different base traffic by category</span>
+<span class="n">base_pv_lambda</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Appliances&quot;</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span>
+    <span class="s2">&quot;Smart Home&quot;</span><span class="p">:</span> <span class="mi">45</span><span class="p">,</span>
+    <span class="s2">&quot;Power Tools&quot;</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span>
+    <span class="s2">&quot;Paint&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="s2">&quot;Outdoor&quot;</span><span class="p">:</span> <span class="mi">65</span><span class="p">,</span>
+    <span class="s2">&quot;Plumbing&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+    <span class="s2">&quot;Flooring&quot;</span><span class="p">:</span> <span class="mi">30</span>
+<span class="p">}</span>
+
+<span class="c1"># Base conversion rates by category</span>
+<span class="n">base_conv_rate</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Appliances&quot;</span><span class="p">:</span> <span class="mf">0.020</span><span class="p">,</span>
+    <span class="s2">&quot;Smart Home&quot;</span><span class="p">:</span> <span class="mf">0.035</span><span class="p">,</span>
+    <span class="s2">&quot;Power Tools&quot;</span><span class="p">:</span> <span class="mf">0.045</span><span class="p">,</span>
+    <span class="s2">&quot;Paint&quot;</span><span class="p">:</span> <span class="mf">0.030</span><span class="p">,</span>
+    <span class="s2">&quot;Outdoor&quot;</span><span class="p">:</span> <span class="mf">0.040</span><span class="p">,</span>
+    <span class="s2">&quot;Plumbing&quot;</span><span class="p">:</span> <span class="mf">0.025</span><span class="p">,</span>
+    <span class="s2">&quot;Flooring&quot;</span><span class="p">:</span> <span class="mf">0.028</span>
+<span class="p">}</span>
+
+<span class="c1"># Supplier-level conversion adjustment (better brands convert better)</span>
+<span class="n">supplier_conv_adj</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Samsung&quot;</span><span class="p">:</span> <span class="mf">1.25</span><span class="p">,</span> <span class="s2">&quot;LG&quot;</span><span class="p">:</span> <span class="mf">1.20</span><span class="p">,</span>
+    <span class="s2">&quot;Milwaukee&quot;</span><span class="p">:</span> <span class="mf">1.20</span><span class="p">,</span> <span class="s2">&quot;DeWalt&quot;</span><span class="p">:</span> <span class="mf">1.15</span><span class="p">,</span> <span class="s2">&quot;Ryobi&quot;</span><span class="p">:</span> <span class="mf">1.10</span><span class="p">,</span>
+    <span class="s2">&quot;Behr&quot;</span><span class="p">:</span> <span class="mf">1.05</span><span class="p">,</span> <span class="s2">&quot;Husky&quot;</span><span class="p">:</span> <span class="mf">0.95</span><span class="p">,</span> <span class="s2">&quot;Delta Faucet&quot;</span><span class="p">:</span> <span class="mf">1.00</span><span class="p">,</span>
+    <span class="s2">&quot;3M&quot;</span><span class="p">:</span> <span class="mf">0.90</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<h4 id="6-simulating-page-views"><strong>6. Simulating Page Views</strong></h4>
+<p>Page views are drawn from a Poisson distribution, where the rate <code>(lambda)</code> is influenced by category, seasonality, COVID effects, supplier strength, and additional lognormal noise to create spikes and a long tail.</p>
+<details class="tip" open="open">
+<summary>Expand/Collapse Code</summary>
+<div class="highlight"><pre><span></span><code><span class="c1"># page views</span>
+<span class="n">lambda_base</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="n">base_pv_lambda</span><span class="p">[</span><span class="n">cat</span><span class="p">]</span> <span class="o">*</span>
+    <span class="n">seasonal_mult</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span>
+    <span class="n">covid_mult</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span>
+    <span class="n">supplier_multiplier</span><span class="p">[</span><span class="n">supplier_col</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cat</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">category_col</span><span class="p">)</span>
+<span class="p">])</span>
+
+<span class="c1"># add extra randomness per row (lognormal so some SKUs spike)</span>
+<span class="n">lambda_noise</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">lognormal</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+<span class="n">lambda_final</span> <span class="o">=</span> <span class="n">lambda_base</span> <span class="o">*</span> <span class="n">lambda_noise</span>
+
+<span class="n">page_views</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">poisson</span><span class="p">(</span><span class="n">lambda_final</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">page_views</span><span class="p">[</span><span class="n">page_views</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># safety</span>
+</code></pre></div>
+</details>
+<h4 id="7-simulating-conversion-orders-and-add-to-cart-events"><strong>7. Simulating Conversion, Orders, and Add-to-Cart Events</strong></h4>
+<p>Conversion rates start from category + supplier baselines and are modified by content quality and lognormal noise. From there, we simulate orders and add-to-cart events.</p>
+<details class="tip" open="open">
+<summary>Expand/Collapse Code</summary>
+<div class="highlight"><pre><span></span><code><span class="c1"># conversion rates vary depending on content </span>
+<span class="n">conv_base</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="n">base_conv_rate</span><span class="p">[</span><span class="n">cat</span><span class="p">]</span> <span class="o">*</span> <span class="n">supplier_conv_adj</span><span class="p">[</span><span class="n">supplier_col</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cat</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">category_col</span><span class="p">)</span>
+<span class="p">])</span>
+
+<span class="c1"># content impact: ~±40–50% swing based on content_score</span>
+<span class="n">content_factor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mf">0.8</span> <span class="o">*</span> <span class="p">((</span><span class="n">content_score</span> <span class="o">-</span> <span class="mi">70</span><span class="p">)</span> <span class="o">/</span> <span class="mf">30.0</span><span class="p">)</span>
+<span class="c1"># random noise factor per row</span>
+<span class="n">conv_noise</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">lognormal</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.35</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+
+<span class="n">conv_rate</span> <span class="o">=</span> <span class="n">conv_base</span> <span class="o">*</span> <span class="n">content_factor</span> <span class="o">*</span> <span class="n">conv_noise</span>
+
+<span class="n">conv_rate</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">conv_rate</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>
+
+<span class="c1"># binomial conversion rates</span>
+<span class="n">orders</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">page_views</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">conv_rate</span><span class="p">)</span>
+
+<span class="n">atc_prob</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">conv_rate</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">),</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.90</span><span class="p">)</span>
+<span class="n">raw_atc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">page_views</span> <span class="o">-</span> <span class="n">orders</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">atc_prob</span><span class="p">)</span>
+<span class="n">atc_events</span> <span class="o">=</span> <span class="n">orders</span> <span class="o">+</span> <span class="n">raw_atc</span>
+</code></pre></div>
+</details>
+<h4 id="8-revenue-simulation-using-category-specific-aov-ranges"><strong>8. Revenue Simulation Using Category-Specific AOV Ranges</strong></h4>
+<p>We then estimate revenue by multiplying order counts by a randomly sampled average order value range specific to each category.</p>
+<details class="tip" open="open">
+<summary>Expand/Collapse Code</summary>
+<div class="highlight"><pre><span></span><code><span class="c1"># revenue with variance per category</span>
+<span class="n">category_aov</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Appliances&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">1500</span><span class="p">),</span>
+    <span class="s2">&quot;Smart Home&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">),</span>
+    <span class="s2">&quot;Power Tools&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">300</span><span class="p">),</span>
+    <span class="s2">&quot;Paint&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">70</span><span class="p">),</span>
+    <span class="s2">&quot;Plumbing&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">120</span><span class="p">),</span>
+    <span class="s2">&quot;Outdoor&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span>
+    <span class="s2">&quot;Flooring&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">revenue</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="n">orders</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">*</span><span class="n">category_aov</span><span class="p">[</span><span class="n">category_col</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="p">])</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<h4 id="9-assembling-the-final-dataframe"><strong>9. Assembling the Final DataFrame</strong></h4>
+<p>Finally, we assemble all metrics and metadata into a single DataFrame with SKU-level detail and several operational fields (e.g., on-time uploads and content changes).</p>
+<details class="tip" open="open">
+<summary>Expand/Collapse Code</summary>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;event_date&quot;</span><span class="p">:</span> <span class="n">date_col</span><span class="p">,</span>
+    <span class="s2">&quot;supplier&quot;</span><span class="p">:</span> <span class="n">supplier_col</span><span class="p">,</span>
+    <span class="s2">&quot;brand&quot;</span><span class="p">:</span> <span class="n">supplier_col</span><span class="p">,</span>
+    <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="n">category_col</span><span class="p">,</span>
+    <span class="s2">&quot;sku_id&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">100000</span><span class="p">,</span> <span class="mi">999999</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span>
+    <span class="s2">&quot;sku_name&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span>
+        <span class="s2">&quot;Cordless Drill Kit&quot;</span><span class="p">,</span><span class="s2">&quot;Smart Washer&quot;</span><span class="p">,</span><span class="s2">&quot;Matte Interior Paint&quot;</span><span class="p">,</span><span class="s2">&quot;Kitchen Faucet&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Smart Doorbell&quot;</span><span class="p">,</span><span class="s2">&quot;Electric Lawnmower&quot;</span><span class="p">,</span><span class="s2">&quot;Laminate Flooring&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Impact Driver&quot;</span><span class="p">,</span><span class="s2">&quot;Mini Fridge&quot;</span><span class="p">,</span><span class="s2">&quot;Exterior Paint&quot;</span><span class="p">,</span><span class="s2">&quot;Shower Head&quot;</span>
+    <span class="p">],</span> <span class="n">n</span><span class="p">),</span>
+    <span class="s2">&quot;merchant_team&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">merchants</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span>
+
+    <span class="s2">&quot;page_views&quot;</span><span class="p">:</span> <span class="n">page_views</span><span class="p">,</span>
+    <span class="s2">&quot;atc_events&quot;</span><span class="p">:</span> <span class="n">atc_events</span><span class="p">,</span>
+    <span class="s2">&quot;orders&quot;</span><span class="p">:</span> <span class="n">orders</span><span class="p">,</span>
+    <span class="s2">&quot;revenue&quot;</span><span class="p">:</span> <span class="n">revenue</span><span class="p">,</span>
+
+    <span class="s2">&quot;content_score&quot;</span><span class="p">:</span> <span class="n">content_score</span><span class="p">,</span>
+    <span class="s2">&quot;asset_quality_score&quot;</span><span class="p">:</span> <span class="n">asset_quality_score</span><span class="p">,</span>
+    <span class="s2">&quot;missing_images&quot;</span><span class="p">:</span> <span class="n">missing_images</span><span class="p">,</span>
+    <span class="s2">&quot;bullet_quality_score&quot;</span><span class="p">:</span> <span class="n">bullet_quality_score</span><span class="p">,</span>
+
+    <span class="s2">&quot;on_time_upload&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span>
+    <span class="s2">&quot;content_changes_made&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span>
+    <span class="s2">&quot;brand_review_meetings&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span>
+<span class="p">})</span>
+</code></pre></div>
+</details>
+<hr />
+<h3 id="exploratory"><strong>Exploratory &amp; Comparative Analysis</strong></h3>
+<h4 id="a-executive-summary-view"><strong>A. Executive Summary View</strong></h4>
+<p>Provides high-level KPIs and trends:</p>
+<ul>
+<li>$265.8M revenue, 3.83% average conversion rate</li>
+<li>Revenue per view, content score, missing image count</li>
+<li>Multi-year revenue trend showing seasonal waves</li>
+<li>Supplier leaderboard comparing revenue, revenue per view, and conversion</li>
+<li>Category-by-supplier performance heatmap</li>
+</ul>
+<p>This view highlights macro patterns and top suppliers (Samsung, LG, Milwaukee).</p>
+<h4 id="b-supplier-deep-dive-view"><strong>B. Supplier Deep Dive View</strong></h4>
+<p>Focuses on supplier efficiency and content health:</p>
+<ul>
+<li>Revenue bar chart across top suppliers</li>
+<li>Complete funnel visualization from page views → add-to-cart → orders</li>
+<li>Image health donut chart (80% complete vs. ~20% missing)</li>
+<li>Content score vs. conversion scatterplot showing strong positive trend</li>
+<li>Ability to filter by supplier, category, or team to identify risk areas</li>
+</ul>
+<p>This view provided actionable clarity on which suppliers are limited by poor content and which are conversion efficient.</p>
+<h4 id="c-sku-level-detail-view"><strong>C. SKU-Level Detail View</strong></h4>
+<p>Highlights SKU-level variability and risk scoring:</p>
+<ul>
+<li>Table with page views, add-to-cart, orders, revenue, content score</li>
+<li>Flags for Critical Risk, Low Conversion, Missing Images, OK</li>
+<li>Lifecycle trend showing long-term page view and order patterns</li>
+<li>SKU-level content score vs. conversion scatterplot to spot high-opportunity items</li>
+</ul>
+<p>This brought attention to specific items needing content updates, new images, or repositioning.</p>
+<p><strong>Key findings:</strong></p>
+<ul>
+<li>Supplier concentration: Top three suppliers drove ~50% of total revenue in the simulated dataset.</li>
+<li>Content quality impacts conversion: SKUs above content score 80 showed conversion rates 1.5–2× higher.</li>
+<li>Missing images are costly: Nearly 20% of SKUs lacked images, correlating to significantly lower conversion.</li>
+<li>Funnel inefficiency: Only 4–5% of page views reached add-to-cart, indicating opportunity in improving page content and clarity.</li>
+<li>SKU-level risk identification: Several high-traffic SKUs were flagged as Critical Risk due to poor content or asset quality.</li>
+</ul>
+<hr />
+<h3 id="business-impact-simulated"><strong>Business Impact (Simulated)</strong></h3>
+<ul>
+<li>Targeted content improvements: Identified SKUs whose content updates could drive a 10–20% lift in conversion.</li>
+<li>Supplier accountability: Clear visibility into supplier content health supported more productive vendor conversations.</li>
+<li>Revenue optimization: Prioritizing missing image fixes for high-traffic SKUs could reclaim an estimated $8–12M in potential revenue.</li>
+<li>Efficiency gains: Automated data refresh and well-defined metrics reduced manual reporting time by 60%.</li>
+<li>Funnel clarity: Highlighted drop-off points that guided UX and content improvements.</li>
+</ul>
+<hr />
+<h3 id="follow-up-questions-opportunities"><strong>Follow-Up Questions &amp; Opportunities</strong></h3>
+<ul>
+<li>Can we A/B test content changes to quantify their direct impact on conversion?</li>
+<li>Which suppliers consistently underperform on content compliance?</li>
+<li>Are certain categories more sensitive to image quality?</li>
+<li>Can we forecast future revenue using content quality as a predictor?</li>
+<li>Should performance thresholds be adjusted based on category seasonality?</li>
+</ul>
+<hr />
+<h3 id="next-steps"><strong>Next Steps</strong></h3>
+<ul>
+<li>Implement content A/B testing per supplier</li>
+<li>Build a predictive model linking content score → conversion probability</li>
+<li>Develop automatic alerts for sudden spikes in missing images</li>
+<li>Expand analysis to subcategories for more granular insights</li>
+<li>Create a supplier-facing scorecard for performance accountability</li>
+</ul>
+<hr />
+<h3 id="conclusion"><strong>Conclusion</strong></h3>
+<p>This simulated supplier analytics project showcases how multi-layered data can be transformed into an actionable, executive-ready reporting suite. By analyzing performance across suppliers, categories, and SKUs—and tying it to content quality and funnel behavior—the project demonstrates how data-driven decision-making can optimize merchandising strategy, vendor conversations, and customer experience.</p>
 
 
 
