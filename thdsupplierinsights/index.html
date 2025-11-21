@@ -18,7 +18,7 @@
         <link rel="prev" href="../d95vsall/">
       
       
-        <link rel="next" href="../video_game_sales_exploratory_data_analysis_in_r/">
+        <link rel="next" href="../pilotstoretest/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -47,8 +47,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gothic+A1:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Gothic A1";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -348,7 +348,7 @@
         
   
   <span class="md-ellipsis">
-    Dept vs. Company Engagement Analysis
+    D95 vs. Company Engagement Analysis
     
   </span>
   
@@ -630,11 +630,55 @@
   
   
     <li class="md-nav__item">
+      <a href="../pilotstoretest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Process Optimization Test Benefits Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../video_game_sales_exploratory_data_analysis_in_r/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Video Game Sales EDA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reporting_automation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reporting Automation
     
   </span>
   
@@ -904,8 +948,9 @@
 </code></pre></div>
 <script type='text/javascript'>                    var divElement = document.getElementById('viz1763507634373');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1527px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
+<p><strong><em>Note:</em></strong> <em>The dashboard experience is best viewed in fullscreen mode.</em></p>
 <h3 id="description"><strong>Description</strong></h3>
-<p>This project explores supplier performance using a simulated multi-year dataset built in Python. The analysis evaluates revenue, conversion rates, content quality, and product-level behavior, surfacing insights to guide merchandising strategy, supplier management, and digital content optimization.</p>
+<p>This project explores supplier performance using a simulated multi-year dataset built in Python. The analysis evaluates revenue, conversion rates, content quality, and product level behavior, uncovering insights to guide merchandising strategy, supplier management, and digital content optimization.</p>
 <p><strong>Goal:</strong> Identify performance drivers across suppliers and SKUs while quantifying opportunities for improved conversion, content quality, and customer engagement.</p>
 <p><strong><em>This dashboard was built using a simulated dataset generated in Python. The dataset is designed to reflect realistic COVID impacts, supplier behavior, and conversion patterns. The code used to generate the dataset can be found below.</em></strong></p>
 <p><a href="https://github.com/nsososa/supplier-insights-dashboard/blob/main/datasetgenerator.ipynb" class="md-button">View Python Code</a></p>
@@ -914,13 +959,13 @@
 <ul>
 <li>Which suppliers contribute the most revenue?</li>
 <li>How does content quality impact conversion?</li>
-<li>Where are the biggest risks—missing images, low conversion, asset quality issues?</li>
+<li>Where are the biggest risks? Missing images, low conversion, or asset quality issues?</li>
 <li>What actions can merchandising teams take to improve performance?</li>
 </ul>
 <h3 id="business-questions"><strong>Business Questions</strong></h3>
 <ul>
 <li>Which suppliers deliver the highest revenue, and how efficient are they (revenue per view)?</li>
-<li>How do product page views translate through the funnel into orders?</li>
+<li>How do product page views translate into orders?</li>
 <li>How large is the missing-image problem, and which brands are most affected?</li>
 <li>How does content score correlate to conversion?</li>
 <li>At the SKU level, which items carry the highest risk or greatest opportunity?</li>
@@ -945,7 +990,7 @@
 </ul>
 <p><strong><em>NOTE: skip to <a href="#exploratory">Exploratory Analysis</a> if you are not interested in how the dataset was generated and designed. It's a LONG section!!</em></strong></p>
 <h4 id="1-imports-random-seed-and-core-dimensions"><strong>1. Imports, Random Seed, and Core Dimensions</strong></h4>
-<p>We start by importing libraries, fixing a random seed for reproducibility, and defining the size and core dimensions of the dataset.</p>
+<p>We start by importing libraries, fixing a random seed for reproducibility, and defining the size and dimensions of the dataset. A sample size of <strong><code>n = 200,000</code></strong> was chosen to provide enough volume to model realistic retail behavior while staying relatively manageable for exploratory analysis and dashboard performance.</p>
 <details class="tip" open="open">
 <summary>Expand/Collapse Code</summary>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
@@ -962,7 +1007,7 @@
 </code></pre></div>
 </details>
 <h4 id="2-seasonality-supplier-strength-and-covid-effects"><strong>2. Seasonality, Supplier Strength, and COVID Effects</strong></h4>
-<p>Next, we define category-level seasonality, supplier multipliers, and a COVID-era demand shock function. These pieces introduce realistic volume variation over time and across brands.</p>
+<p>Next, we define category level seasonality, supplier multipliers, and a function to model COVID-era demand. Premium suppliers such as Samsung and LG are assigned higher multipliers to mimic their stronger performance. Seasonal purchasing trends such as increased paint sales during warmer months are also incorporated.</p>
 <details class="tip" open="open">
 <summary>Expand/Collapse Code</summary>
 <div class="highlight"><pre><span></span><code><span class="c1"># simulated seasonal patterns by month</span>
@@ -1009,7 +1054,7 @@
 </code></pre></div>
 </details>
 <h4 id="4-content-quality-segmentation-and-scores"><strong>4. Content Quality Segmentation and Scores</strong></h4>
-<p>We segment SKUs into poor, average, and great content groups. Each group gets different distributions for content score, asset quality, bullet quality, and missing images—reflecting how better content usually comes with fewer issues.</p>
+<p>We segment SKUs into poor, average, and great content groups. Each group gets different distributions for content score, asset quality, bullet quality, and missing images. This will help reflect how better content usually comes with fewer issues.</p>
 <details class="tip" open="open">
 <summary>Expand/Collapse Code</summary>
 <div class="highlight"><pre><span></span><code><span class="c1"># devising more variance in content scores depending on &quot;missing images&quot;, &quot;asset quality&quot;, and &quot;bullet quality&quot; - description quality</span>
@@ -1049,7 +1094,7 @@
 </code></pre></div>
 </details>
 <h4 id="5-base-traffic-and-conversion-rates-by-category-supplier"><strong>5. Base Traffic and Conversion Rates by Category &amp; Supplier</strong></h4>
-<p>We define base page-view intensity and base conversion rates per category, then apply supplier-level adjustments so stronger brands convert better.</p>
+<p>We define base page view traffic and conversion rates per category, then apply supplier-level adjustments so stronger brands convert better.</p>
 <details class="tip" open="open">
 <summary>Expand/Collapse Code</summary>
 <div class="highlight"><pre><span></span><code><span class="c1"># Different base traffic by category</span>
@@ -1084,7 +1129,7 @@
 </code></pre></div>
 </details>
 <h4 id="6-simulating-page-views"><strong>6. Simulating Page Views</strong></h4>
-<p>Page views are drawn from a Poisson distribution, where the rate <code>(lambda)</code> is influenced by category, seasonality, COVID effects, supplier strength, and additional lognormal noise to create spikes and a long tail.</p>
+<p>Page views are drawn from a Poisson distribution, where the rate <code>(lambda)</code> is influenced by category, seasonality, COVID effects, supplier strength, and additional lognormal noise to create spikes and a long tail. This helps create more randomness in each observation.</p>
 <details class="tip" open="open">
 <summary>Expand/Collapse Code</summary>
 <div class="highlight"><pre><span></span><code><span class="c1"># page views</span>
@@ -1105,7 +1150,7 @@
 </code></pre></div>
 </details>
 <h4 id="7-simulating-conversion-orders-and-add-to-cart-events"><strong>7. Simulating Conversion, Orders, and Add-to-Cart Events</strong></h4>
-<p>Conversion rates start from category + supplier baselines and are modified by content quality and lognormal noise. From there, we simulate orders and add-to-cart events.</p>
+<p>Conversion rates start from category + supplier baselines and are modified by content quality and lognormal noise. From there, we simulate orders and add to cart events.</p>
 <details class="tip" open="open">
 <summary>Expand/Collapse Code</summary>
 <div class="highlight"><pre><span></span><code><span class="c1"># conversion rates vary depending on content </span>
@@ -1153,7 +1198,7 @@
 </code></pre></div>
 </details>
 <h4 id="9-assembling-the-final-dataframe"><strong>9. Assembling the Final DataFrame</strong></h4>
-<p>Finally, we assemble all metrics and metadata into a single DataFrame with SKU-level detail and several operational fields (e.g., on-time uploads and content changes).</p>
+<p>Finally, we assemble all metrics and metadata into a single DataFrame with SKU-level detail and other supporting fields (e.g., on time uploads, content changes, and brand review meetings).</p>
 <details class="tip" open="open">
 <summary>Expand/Collapse Code</summary>
 <div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
@@ -1192,46 +1237,44 @@
 <ul>
 <li>$265.8M revenue, 3.83% average conversion rate</li>
 <li>Revenue per view, content score, missing image count</li>
-<li>Multi-year revenue trend showing seasonal waves</li>
+<li>Multi-year revenue chart showing seasonal trends</li>
 <li>Supplier leaderboard comparing revenue, revenue per view, and conversion</li>
-<li>Category-by-supplier performance heatmap</li>
+<li>Category by supplier performance heatmap</li>
 </ul>
 <p>This view highlights macro patterns and top suppliers (Samsung, LG, Milwaukee).</p>
 <h4 id="b-supplier-deep-dive-view"><strong>B. Supplier Deep Dive View</strong></h4>
 <p>Focuses on supplier efficiency and content health:</p>
 <ul>
 <li>Revenue bar chart across top suppliers</li>
-<li>Complete funnel visualization from page views → add-to-cart → orders</li>
+<li>Complete funnel visualization from page views → add to cart → orders</li>
 <li>Image health donut chart (80% complete vs. ~20% missing)</li>
 <li>Content score vs. conversion scatterplot showing strong positive trend</li>
 <li>Ability to filter by supplier, category, or team to identify risk areas</li>
 </ul>
-<p>This view provided actionable clarity on which suppliers are limited by poor content and which are conversion efficient.</p>
+<p>This view provides clarity on which suppliers are limited by poor content and which are effective in conversion.</p>
 <h4 id="c-sku-level-detail-view"><strong>C. SKU-Level Detail View</strong></h4>
 <p>Highlights SKU-level variability and risk scoring:</p>
 <ul>
-<li>Table with page views, add-to-cart, orders, revenue, content score</li>
+<li>Table with page views, add to cart, orders, revenue, content score</li>
 <li>Flags for Critical Risk, Low Conversion, Missing Images, OK</li>
-<li>Lifecycle trend showing long-term page view and order patterns</li>
-<li>SKU-level content score vs. conversion scatterplot to spot high-opportunity items</li>
+<li>Lifecycle trend showing long term page view and order patterns</li>
+<li>SKU-level content score vs. conversion scatterplot to easily spot impactful items</li>
 </ul>
-<p>This brought attention to specific items needing content updates, new images, or repositioning.</p>
 <p><strong>Key findings:</strong></p>
 <ul>
-<li>Supplier concentration: Top three suppliers drove ~50% of total revenue in the simulated dataset.</li>
-<li>Content quality impacts conversion: SKUs above content score 80 showed conversion rates 1.5–2× higher.</li>
-<li>Missing images are costly: Nearly 20% of SKUs lacked images, correlating to significantly lower conversion.</li>
-<li>Funnel inefficiency: Only 4–5% of page views reached add-to-cart, indicating opportunity in improving page content and clarity.</li>
-<li>SKU-level risk identification: Several high-traffic SKUs were flagged as Critical Risk due to poor content or asset quality.</li>
+<li><strong>Supplier concentration:</strong> Top three suppliers drove ~50% of total revenue.</li>
+<li><strong>Content quality impacts conversion:</strong> SKUs above content score 80 showed conversion rates 1.5–2x higher.</li>
+<li><strong>Missing images are costly:</strong> Nearly 20% of SKUs lacked images, correlating to significantly lower conversion.</li>
+<li><strong>Funnel inefficiency:</strong> Only 4–5% of page views reached orders, indicating opportunity in improving page content and clarity.</li>
+<li><strong>SKU-level risk identification:</strong> Several high traffic SKUs were flagged as Critical Risk due to poor content or asset quality.</li>
 </ul>
 <hr />
 <h3 id="business-impact-simulated"><strong>Business Impact (Simulated)</strong></h3>
 <ul>
-<li>Targeted content improvements: Identified SKUs whose content updates could drive a 10–20% lift in conversion.</li>
-<li>Supplier accountability: Clear visibility into supplier content health supported more productive vendor conversations.</li>
-<li>Revenue optimization: Prioritizing missing image fixes for high-traffic SKUs could reclaim an estimated $8–12M in potential revenue.</li>
-<li>Efficiency gains: Automated data refresh and well-defined metrics reduced manual reporting time by 60%.</li>
-<li>Funnel clarity: Highlighted drop-off points that guided UX and content improvements.</li>
+<li><strong>Targeted content improvements:</strong> Identified SKUs whose content updates could drive a 10–20% lift in conversion.</li>
+<li><strong>Supplier accountability:</strong> Clear visibility into supplier content health would lead to more productive conversation with suppliers.</li>
+<li><strong>Revenue optimization:</strong> Prioritizing missing image fixes for high traffic SKUs could reclaim an estimated $8–12M in potential revenue.</li>
+<li><strong>Funnel clarity:</strong> Highlighted drop off points that guided UX and content improvements.</li>
 </ul>
 <hr />
 <h3 id="follow-up-questions-opportunities"><strong>Follow-Up Questions &amp; Opportunities</strong></h3>
@@ -1247,13 +1290,12 @@
 <ul>
 <li>Implement content A/B testing per supplier</li>
 <li>Build a predictive model linking content score → conversion probability</li>
-<li>Develop automatic alerts for sudden spikes in missing images</li>
 <li>Expand analysis to subcategories for more granular insights</li>
-<li>Create a supplier-facing scorecard for performance accountability</li>
+<li>Create a supplier-facing scorecard for tracking performance</li>
 </ul>
 <hr />
 <h3 id="conclusion"><strong>Conclusion</strong></h3>
-<p>This simulated supplier analytics project showcases how multi-layered data can be transformed into an actionable, executive-ready reporting suite. By analyzing performance across suppliers, categories, and SKUs—and tying it to content quality and funnel behavior—the project demonstrates how data-driven decision-making can optimize merchandising strategy, vendor conversations, and customer experience.</p>
+<p>This simulated supplier analytics project showcases how simulated data can be transformed into an actionable dashboard. By analyzing performance across suppliers, categories, and SKUs, the project demonstrates how data-driven decision making can optimize merchandising strategy, supplier performance, and customer experience.</p>
 
 
 
@@ -1283,7 +1325,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../d95vsall/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Dept vs. Company Engagement Analysis">
+          <a href="../d95vsall/" class="md-footer__link md-footer__link--prev" aria-label="Previous: D95 vs. Company Engagement Analysis">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1293,20 +1335,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Dept vs. Company Engagement Analysis
+                D95 vs. Company Engagement Analysis
               </div>
             </div>
           </a>
         
         
           
-          <a href="../video_game_sales_exploratory_data_analysis_in_r/" class="md-footer__link md-footer__link--next" aria-label="Next: Video Game Sales EDA">
+          <a href="../pilotstoretest/" class="md-footer__link md-footer__link--next" aria-label="Next: Process Optimization Test Benefits Overview">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Video Game Sales EDA
+                Process Optimization Test Benefits Overview
               </div>
             </div>
             <div class="md-footer__button md-icon">

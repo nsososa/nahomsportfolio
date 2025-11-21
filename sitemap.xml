@@ -2,26 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nsososa.github.io/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://nsososa.github.io/about/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://nsososa.github.io/d95vsall/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-11-21</lastmod>
+    </url>
+    <url>
+         <loc>https://nsososa.github.io/pilotstoretest/</loc>
+         <lastmod>2025-11-21</lastmod>
+    </url>
+    <url>
+         <loc>https://nsososa.github.io/reporting_automation/</loc>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://nsososa.github.io/resume/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://nsososa.github.io/thdsupplierinsights/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
     <url>
          <loc>https://nsososa.github.io/video_game_sales_exploratory_data_analysis_in_r/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-11-21</lastmod>
     </url>
 </urlset>

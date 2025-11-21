@@ -70,6 +70,10 @@
     }
 }
 
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: #C2A869;
+}
+
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color:        #121317;
   --md-primary-fg-color--light: #4B7CA8;
@@ -123,7 +127,7 @@
 
 /* ---------- DARK MODE ---------- */
 [data-md-color-scheme="slate"] .md-footer-meta {
-  background-color: #121317;     /* darker navy for dark mode */
+  background-color: #121712;     /* darker navy for dark mode */
   color: #C2A869;                /* GT gold text */
 }
 
@@ -333,8 +337,7 @@ html {
 
 /* ---------- LIGHT MODE BUTTONS ---------- */
 [data-md-color-scheme="default"] .md-button {
-  color: #C2A869;
-  border: 1px solid var(--md-primary-fg-color);
+  color: #02033e;
   background-color: transparent;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -347,7 +350,6 @@ html {
 [data-md-color-scheme="default"] .md-button--primary {
   background-color: var(--md-primary-fg-color);
   color: #fff;
-  border: 1px solid var(--md-primary-fg-color);
 }
 
 [data-md-color-scheme="default"] .md-button--primary:hover {
@@ -356,10 +358,6 @@ html {
 }
 
 /* Optional: a secondary gold-outline style */
-[data-md-color-scheme="default"] .md-button--secondary {
-  border: 1px solid var(--md-accent-fg-color);
-  color: var(--md-accent-fg-color);
-}
 
 [data-md-color-scheme="default"] .md-button--secondary:hover {
   background-color: var(--md-accent-fg-color);
@@ -370,9 +368,8 @@ html {
 [data-md-color-scheme="default"] .md-button,
 [data-md-color-scheme="default"] .md-button--primary,
 [data-md-color-scheme="default"] .md-button--secondary {
-  background-color: var(--md-primary-fg-color);   /* solid navy default */
+  background-color: #02033e;   /* solid navy default */
   color: #fff;
-  border: 1px solid var(--md-primary-fg-color);
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
@@ -401,13 +398,10 @@ html {
 
 
 /* ---------- DARK MODE BUTTONS ---------- */
-[data-md-color-scheme="slate"] .md-button,
+/* [data-md-color-scheme="slate"] .md-button,
 [data-md-color-scheme="slate"] .md-button--primary,
 [data-md-color-scheme="slate"] .md-button--secondary {
-  background-color: var(--md-accent-fg-color);   /* solid gold default */
-  color: #000;
-  border: 1px solid var(--md-accent-fg-color);
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  background-color: #000123;   /* solid gold default */
 }
 
 /* Hover: switch to gold outline */
